@@ -111,7 +111,7 @@ class ARPage
             $data['target_src'] = \PL_AR_LINK.$makerFileName.'.mind';
         }
 
-        $object = array_merge($object, $attrs);
+        // $object = array_merge($object, $attrs);
         $marker = ['url' => \PL_AR_LINK.$makerURL, 'type' => 'patt' == $makerExt ? 'pattern' : ''];
 
         return compact('marker', 'object');
