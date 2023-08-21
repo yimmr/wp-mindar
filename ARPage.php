@@ -84,8 +84,8 @@ class ARPage
                     'type'            => 'entity',
                     'animation-mixer' => true,
                     'gltf-model'      => '#'.$srcId,
-                    'position'        => '0 0 0',
-                    'scale'           => '0.01 0.01 0.01',
+                    'position'        => '0 0 0.1',
+                    'scale'           => '0.007 0.007 0.007',
                 ];
                 break;
             default:break;
