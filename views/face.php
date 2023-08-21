@@ -1,6 +1,5 @@
-<a-scene mindar-face="autoStart: true" embedded color-space="sRGB"
-         renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
-         device-orientation-permission-ui="enabled: false">
+<a-scene mindar-face="autoStart: true" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights"
+         vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
     <?php require_once __DIR__.'/assets.php'; ?>
     <?php foreach ($pageData['items'] as $item) {?>
     <a-entity mindar-image-target="targetIndex: 0">
