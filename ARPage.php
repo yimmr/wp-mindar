@@ -109,7 +109,7 @@ class ARPage
                 'position'  => '0 0 0.1',
                 'scale'     => '0.005 0.005 0.005',
             ];
-            $data['target_src'] = $makerFileName.'.mind';
+            $data['target_src'] = \PL_AR_LINK.$makerFileName.'.mind';
         }
 
         $marker = ['url' => \PL_AR_LINK.$makerURL, 'type' => 'patt' == $makerExt ? 'pattern' : ''];
