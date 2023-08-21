@@ -99,7 +99,7 @@ class pl_ar_Shortcode  {
 				
 				<div class="pl_ar_object_path_class" style="margin: 30px;">
 					<select id="pl_ar_type">
-						<option value="marker">Face</option>
+						<option value="face">Face</option>
 						<option value="image">Image</option>
 						<option value="marker">Marker</option>
 						<option value="location">Location</option>
