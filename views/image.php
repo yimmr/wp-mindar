@@ -14,5 +14,8 @@ $target = $pageData['target_src'];
     </a-entity>
     <?php }?>
 </a-scene>
-
-</html>
+<div id="ar-controls-container" class="ar-controls-container">
+    <div class="buttons">
+        <button id="switch-camera-button">Switch Camera</button>
+    </div>
+</div>

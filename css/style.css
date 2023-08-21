@@ -1,0 +1,13 @@
+.ar-controls-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: none;
+    height: 30px;
+    z-index: 2;
+}
+
+.ar-controls-container .buttons {
+    display: flex;
+    justify-content: right;
+}

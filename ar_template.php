@@ -35,6 +35,8 @@ add_action('wp_enqueue_scripts', function () use ($type) {
         default:break;
     }
 
+    \wp_enqueue_style('wp-mindar', PL_AR_LINK.'css/style.css');
+
     // wp_enqueue_script('aframe-extras', PL_AR_LINK.'js/aframe-extras.loaders.min.js');
     // wp_enqueue_script( 'aframe-resize', PL_AR_LINK.'js/resize.js' );
 });
