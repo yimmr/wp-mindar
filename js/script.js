@@ -29,6 +29,12 @@ document.addEventListener('DOMContentLoaded', function () {
     sceneEl.addEventListener('loaded', function () {
         const arSystem = sceneEl.systems['mindar-face-system'];
         console.log('Scene loaded.');
+        document.querySelector('#start-button')?.addEventListener('click', () => {
+            arSystem.start();
+        });
+        document.querySelector('#stop-button')?.addEventListener('click', () => {
+            arSystem.stop();
+        });
         switchCameraButton('#switch-camera-button', arSystem);
     });
 

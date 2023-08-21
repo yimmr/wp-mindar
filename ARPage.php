@@ -85,6 +85,7 @@ class ARPage
                     'animation-mixer' => true,
                     'gltf-model'      => '#'.$srcId,
                     'position'        => '0 0 0',
+                    'scale'           => '0.05 0.05 0.05',
                 ];
                 break;
             default:break;
@@ -104,14 +105,11 @@ class ARPage
                 'type'      => 'gltf-model',
                 'src'       => $object['gltf-model'],
                 'animation' => 'property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate',
-                'rotation'  => '0 0 0 ',
-                'position'  => '0 0 0.1',
-                'scale'     => '0.005 0.005 0.005',
             ];
             $data['target_src'] = \PL_AR_LINK.$makerFileName.'.mind';
         }
 
-        // $object = array_merge($object, $attrs);
+        //  $object = array_merge($object, $attrs);
         $marker = ['url' => \PL_AR_LINK.$makerURL, 'type' => 'patt' == $makerExt ? 'pattern' : ''];
 
         return compact('marker', 'object');
