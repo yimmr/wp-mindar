@@ -2,8 +2,7 @@
 $target = $pageData['target_src'];
 ?>
 <a-scene mindar-image="imageTargetSrc: <?php echo $target; ?>"
-         mindar-face="autoStart: true" embedded color-space="sRGB"
-         renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
+         color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
          device-orientation-permission-ui="enabled: false">
     <?php require_once __DIR__.'/assets.php'; ?>
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
