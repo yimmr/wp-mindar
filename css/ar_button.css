@@ -1,0 +1,19 @@
+/*Ar button at frontend*/
+
+
+/* General button style */
+/*
+
+*/
+.ar_button {
+    border: none !important;
+    cursor: pointer !important;
+    border: none !important; 
+    background-position: 10% 50%;
+
+}
+
+.ar_button:hover {
+  /*background-color: RoyalBlue !important;*/
+}
+

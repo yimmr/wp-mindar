@@ -1,0 +1,2070 @@
+[Tue, 03 Dec 2019 00:07:39 +0300] MKDIR: array (
+  'added' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575320859,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cy9jdWJv',
+      'name' => 'cubo',
+      'phash' => 'l1_b2JqZWN0cw',
+      'volumeid' => 'l1_',
+    ),
+    1 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575320859,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cy9jdWJvL3RleHR1cmVz',
+      'name' => 'textures',
+      'phash' => 'l1_b2JqZWN0cy9jdWJv',
+      'volumeid' => 'l1_',
+    ),
+  ),
+  'hashes' => 
+  array (
+    '/cubo' => 'l1_b2JqZWN0cy9jdWJv',
+    '/cubo/textures' => 'l1_b2JqZWN0cy9jdWJvL3RleHR1cmVz',
+  ),
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575320859,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cw',
+      'name' => 'objects',
+      'phash' => 'l1_Lw',
+      'volumeid' => 'l1_',
+      'dirs' => 1,
+    ),
+  ),
+) 
+[Tue, 03 Dec 2019 00:07:39 +0300] UPLOAD: array (
+  'added' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575320859,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cy9jdWJv',
+      'name' => 'cubo',
+      'phash' => 'l1_b2JqZWN0cw',
+      'volumeid' => 'l1_',
+      'dirs' => 1,
+    ),
+    1 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575320859,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cy9jdWJvL3RleHR1cmVz',
+      'name' => 'textures',
+      'phash' => 'l1_b2JqZWN0cy9jdWJv',
+      'volumeid' => 'l1_',
+    ),
+    2 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575320859,
+      'mime' => 'image/jpeg',
+      'read' => 1,
+      'write' => 1,
+      'size' => '77395',
+      'hash' => 'l1_b2JqZWN0cy9jdWJvL3RleHR1cmVzL2N1Ym9fTUFURVJJQUxfYmFzZUNvbG9yLmpwZWc',
+      'name' => 'cubo_MATERIAL_baseColor.jpeg',
+      'phash' => 'l1_b2JqZWN0cy9jdWJvL3RleHR1cmVz',
+      'tmb' => 1,
+      'url' => '/localbeaty/wp-content/plugins/ar-plugin/vendor/elfinder/php/../files/objects/cubo/textures/cubo_MATERIAL_baseColor.jpeg',
+    ),
+    3 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575320859,
+      'mime' => 'image/jpeg',
+      'read' => 1,
+      'write' => 1,
+      'size' => '87897',
+      'hash' => 'l1_b2JqZWN0cy9jdWJvL3RleHR1cmVzL2xhbWJlcnQzX2Jhc2VDb2xvci5qcGVn',
+      'name' => 'lambert3_baseColor.jpeg',
+      'phash' => 'l1_b2JqZWN0cy9jdWJvL3RleHR1cmVz',
+      'tmb' => 1,
+      'url' => '/localbeaty/wp-content/plugins/ar-plugin/vendor/elfinder/php/../files/objects/cubo/textures/lambert3_baseColor.jpeg',
+    ),
+    4 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575320859,
+      'mime' => 'image/jpeg',
+      'read' => 1,
+      'write' => 1,
+      'size' => '98856',
+      'hash' => 'l1_b2JqZWN0cy9jdWJvL3RleHR1cmVzL2xhbWJlcnQ0X2Jhc2VDb2xvci5qcGVn',
+      'name' => 'lambert4_baseColor.jpeg',
+      'phash' => 'l1_b2JqZWN0cy9jdWJvL3RleHR1cmVz',
+      'tmb' => 1,
+      'url' => '/localbeaty/wp-content/plugins/ar-plugin/vendor/elfinder/php/../files/objects/cubo/textures/lambert4_baseColor.jpeg',
+    ),
+    5 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575320859,
+      'mime' => 'image/jpeg',
+      'read' => 1,
+      'write' => 1,
+      'size' => '67435',
+      'hash' => 'l1_b2JqZWN0cy9jdWJvL3RleHR1cmVzL2xhbWJlcnQ1X2Jhc2VDb2xvci5qcGVn',
+      'name' => 'lambert5_baseColor.jpeg',
+      'phash' => 'l1_b2JqZWN0cy9jdWJvL3RleHR1cmVz',
+      'tmb' => 1,
+      'url' => '/localbeaty/wp-content/plugins/ar-plugin/vendor/elfinder/php/../files/objects/cubo/textures/lambert5_baseColor.jpeg',
+    ),
+    6 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575320859,
+      'mime' => 'image/jpeg',
+      'read' => 1,
+      'write' => 1,
+      'size' => '101225',
+      'hash' => 'l1_b2JqZWN0cy9jdWJvL3RleHR1cmVzL2xhbWJlcnQ3X2Jhc2VDb2xvci5qcGVn',
+      'name' => 'lambert7_baseColor.jpeg',
+      'phash' => 'l1_b2JqZWN0cy9jdWJvL3RleHR1cmVz',
+      'tmb' => 1,
+      'url' => '/localbeaty/wp-content/plugins/ar-plugin/vendor/elfinder/php/../files/objects/cubo/textures/lambert7_baseColor.jpeg',
+    ),
+  ),
+  'warning' => 
+  array (
+    0 => 'errUploadFile',
+    1 => 'scene.bin',
+    2 => 'errUploadMime',
+    3 => '(application/octet-stream)',
+    4 => 'errUploadFile',
+    5 => 'scene.gltf',
+    6 => 'errUploadMime',
+    7 => '(application/octet-stream)',
+  ),
+  'removed' => 
+  array (
+  ),
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575320859,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cw',
+      'name' => 'objects',
+      'phash' => 'l1_Lw',
+      'volumeid' => 'l1_',
+      'dirs' => 1,
+    ),
+  ),
+) 
+[Tue, 03 Dec 2019 00:17:16 +0300] UPLOAD: array (
+  'added' => 
+  array (
+  ),
+  'warning' => 
+  array (
+    0 => 'errUploadFile',
+    1 => 'scene.gltf',
+    2 => 'errUploadMime',
+    3 => '(application/octet-stream)',
+  ),
+  'removed' => 
+  array (
+  ),
+) 
+[Tue, 03 Dec 2019 00:18:39 +0300] UPLOAD: array (
+  'added' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575321519,
+      'mime' => 'application/octet-stream',
+      'read' => 1,
+      'write' => 1,
+      'size' => '17280',
+      'hash' => 'l1_b2JqZWN0cy9jdWJvL3NjZW5lLmJpbg',
+      'name' => 'scene.bin',
+      'phash' => 'l1_b2JqZWN0cy9jdWJv',
+      'url' => '/localbeaty/wp-content/plugins/ar-plugin/vendor/elfinder/php/../files/objects/cubo/scene.bin',
+    ),
+  ),
+  'removed' => 
+  array (
+  ),
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575321519,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cy9jdWJv',
+      'name' => 'cubo',
+      'phash' => 'l1_b2JqZWN0cw',
+      'volumeid' => 'l1_',
+      'dirs' => 1,
+    ),
+  ),
+) 
+[Tue, 03 Dec 2019 00:18:43 +0300] UPLOAD: array (
+  'added' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575321523,
+      'mime' => 'application/octet-stream',
+      'read' => 1,
+      'write' => 1,
+      'size' => '22136',
+      'hash' => 'l1_b2JqZWN0cy9jdWJvL3NjZW5lLmdsdGY',
+      'name' => 'scene.gltf',
+      'phash' => 'l1_b2JqZWN0cy9jdWJv',
+      'url' => '/localbeaty/wp-content/plugins/ar-plugin/vendor/elfinder/php/../files/objects/cubo/scene.gltf',
+    ),
+  ),
+  'removed' => 
+  array (
+  ),
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575321523,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cy9jdWJv',
+      'name' => 'cubo',
+      'phash' => 'l1_b2JqZWN0cw',
+      'volumeid' => 'l1_',
+      'dirs' => 1,
+    ),
+  ),
+) 
+[Tue, 03 Dec 2019 21:00:13 +0300] MKDIR: array (
+  'added' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396013,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cy80MzY0NjczMzI',
+      'name' => '436467332',
+      'phash' => 'l1_b2JqZWN0cw',
+      'volumeid' => 'l1_',
+    ),
+    1 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396013,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cy80MzY0NjczMzIvdGV4dHVyZXM',
+      'name' => 'textures',
+      'phash' => 'l1_b2JqZWN0cy80MzY0NjczMzI',
+      'volumeid' => 'l1_',
+    ),
+  ),
+  'hashes' => 
+  array (
+    '/436467332' => 'l1_b2JqZWN0cy80MzY0NjczMzI',
+    '/436467332/textures' => 'l1_b2JqZWN0cy80MzY0NjczMzIvdGV4dHVyZXM',
+  ),
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396013,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cw',
+      'name' => 'objects',
+      'phash' => 'l1_Lw',
+      'volumeid' => 'l1_',
+      'dirs' => 1,
+    ),
+  ),
+) 
+[Tue, 03 Dec 2019 21:00:14 +0300] UPLOAD: array (
+  'added' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396013,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cy80MzY0NjczMzI',
+      'name' => '436467332',
+      'phash' => 'l1_b2JqZWN0cw',
+      'volumeid' => 'l1_',
+      'dirs' => 1,
+    ),
+    1 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396014,
+      'mime' => 'application/octet-stream',
+      'read' => 1,
+      'write' => 1,
+      'size' => '215884',
+      'hash' => 'l1_b2JqZWN0cy80MzY0NjczMzIvc2NlbmUuYmlu',
+      'name' => 'scene.bin',
+      'phash' => 'l1_b2JqZWN0cy80MzY0NjczMzI',
+      'url' => '/localbeaty/wp-content/plugins/ar-plugin/vendor/elfinder/php/../../../file_manager/objects/436467332/scene.bin',
+    ),
+    2 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396014,
+      'mime' => 'application/octet-stream',
+      'read' => 1,
+      'write' => 1,
+      'size' => '84991',
+      'hash' => 'l1_b2JqZWN0cy80MzY0NjczMzIvc2NlbmUuZ2x0Zg',
+      'name' => 'scene.gltf',
+      'phash' => 'l1_b2JqZWN0cy80MzY0NjczMzI',
+      'url' => '/localbeaty/wp-content/plugins/ar-plugin/vendor/elfinder/php/../../../file_manager/objects/436467332/scene.gltf',
+    ),
+    3 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396013,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cy80MzY0NjczMzIvdGV4dHVyZXM',
+      'name' => 'textures',
+      'phash' => 'l1_b2JqZWN0cy80MzY0NjczMzI',
+      'volumeid' => 'l1_',
+    ),
+    4 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396014,
+      'mime' => 'image/png',
+      'read' => 1,
+      'write' => 1,
+      'size' => '355921',
+      'hash' => 'l1_b2JqZWN0cy80MzY0NjczMzIvdGV4dHVyZXMvU3RhbmRhcmRfMV9iYXNlQ29sb3IucG5n',
+      'name' => 'Standard_1_baseColor.png',
+      'phash' => 'l1_b2JqZWN0cy80MzY0NjczMzIvdGV4dHVyZXM',
+      'tmb' => 1,
+      'url' => '/localbeaty/wp-content/plugins/ar-plugin/vendor/elfinder/php/../../../file_manager/objects/436467332/textures/Standard_1_baseColor.png',
+    ),
+    5 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396014,
+      'mime' => 'image/png',
+      'read' => 1,
+      'write' => 1,
+      'size' => '424603',
+      'hash' => 'l1_b2JqZWN0cy80MzY0NjczMzIvdGV4dHVyZXMvU3RhbmRhcmRfMV9ub3JtYWwucG5n',
+      'name' => 'Standard_1_normal.png',
+      'phash' => 'l1_b2JqZWN0cy80MzY0NjczMzIvdGV4dHVyZXM',
+      'tmb' => 1,
+      'url' => '/localbeaty/wp-content/plugins/ar-plugin/vendor/elfinder/php/../../../file_manager/objects/436467332/textures/Standard_1_normal.png',
+    ),
+  ),
+  'removed' => 
+  array (
+  ),
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396013,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cw',
+      'name' => 'objects',
+      'phash' => 'l1_Lw',
+      'volumeid' => 'l1_',
+      'dirs' => 1,
+    ),
+  ),
+) 
+[Tue, 03 Dec 2019 21:15:32 +0300] MKDIR: array (
+  'added' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396932,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 't1_b2JqZWN0cw',
+      'name' => 'objects',
+      'phash' => 't1_Lw',
+      'volumeid' => 't1_',
+      'url' => NULL,
+    ),
+  ),
+  'hashes' => 
+  array (
+    '/objects' => 't1_b2JqZWN0cw',
+  ),
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396932,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 't1_Lw',
+      'name' => 'Trash',
+      'rootRev' => '',
+      'options' => 
+      array (
+        'path' => '',
+        'url' => '',
+        'tmbUrl' => '/localbeaty/wp-content/plugins/ar-plugin/vendor/elfinder/php/../files/.trash/.tmb/',
+        'disabled' => 
+        array (
+          0 => 'archive',
+          1 => 'duplicate',
+          2 => 'edit',
+          3 => 'extract',
+          4 => 'mkfile',
+          5 => 'places',
+          6 => 'put',
+          7 => 'rename',
+          8 => 'resize',
+          9 => 'upload',
+          10 => 'chmod',
+        ),
+        'separator' => '\\',
+        'copyOverwrite' => 0,
+        'uploadOverwrite' => 1,
+        'uploadMaxSize' => 9223372036854775807,
+        'uploadMaxConn' => 3,
+        'uploadMime' => 
+        array (
+          'firstOrder' => 'deny',
+          'allow' => 
+          array (
+            0 => 'application/octet-stream',
+            1 => 'model/gltf-binary',
+            2 => 'model/gltf',
+            3 => 'image/x-ms-bmp',
+            4 => 'image/gif',
+            5 => 'image/jpeg',
+            6 => 'image/png',
+            7 => 'image/x-icon',
+            8 => 'text/plain',
+            9 => 'text/x-php',
+            10 => 'application/zip',
+          ),
+          'deny' => 
+          array (
+            0 => 'all',
+          ),
+        ),
+        'dispInlineRegex' => '^(?:(?:video|audio)|image/(?!.+\\+xml)|application/(?:ogg|x-mpegURL|dash\\+xml)|(?:text/plain|application/pdf)$)',
+        'jpgQuality' => 100,
+        'archivers' => 
+        array (
+          'create' => 
+          array (
+            0 => 'application/zip',
+          ),
+          'extract' => 
+          array (
+            0 => 'application/zip',
+          ),
+          'createext' => 
+          array (
+            'application/zip' => 'zip',
+          ),
+        ),
+        'uiCmdMap' => 
+        array (
+          'paste' => 'hidden',
+          'mkdir' => 'hidden',
+          'copy' => 'restore',
+        ),
+        'syncChkAsTs' => 1,
+        'syncMinMs' => 10000,
+        'i18nFolderName' => 0,
+        'tmbCrop' => 1,
+        'substituteImg' => true,
+        'onetimeUrl' => false,
+        'csscls' => 'elfinder-navbar-root-trash',
+      ),
+      'volumeid' => 't1_',
+      'locked' => 1,
+      'dirs' => 1,
+      'url' => NULL,
+      'isroot' => 1,
+      'phash' => '',
+    ),
+  ),
+) 
+[Tue, 03 Dec 2019 21:15:32 +0300] PASTE: array (
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396932,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 't1_b2JqZWN0cw',
+      'name' => 'objects',
+      'phash' => 't1_Lw',
+      'volumeid' => 't1_',
+      'dirs' => 1,
+      'url' => NULL,
+    ),
+  ),
+  'added' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396932,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 't1_b2JqZWN0cy80MzY0NjczMzI',
+      'name' => '436467332',
+      'phash' => 't1_b2JqZWN0cw',
+      'volumeid' => 't1_',
+      'dirs' => 1,
+      'url' => NULL,
+    ),
+    1 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396014,
+      'mime' => 'application/octet-stream',
+      'read' => 1,
+      'write' => 1,
+      'size' => '215884',
+      'hash' => 't1_b2JqZWN0cy80MzY0NjczMzIvc2NlbmUuYmlu',
+      'name' => 'scene.bin',
+      'phash' => 't1_b2JqZWN0cy80MzY0NjczMzI',
+    ),
+    2 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396014,
+      'mime' => 'text/plain',
+      'read' => 1,
+      'write' => 1,
+      'size' => '84991',
+      'hash' => 't1_b2JqZWN0cy80MzY0NjczMzIvc2NlbmUuZ2x0Zg',
+      'name' => 'scene.gltf',
+      'phash' => 't1_b2JqZWN0cy80MzY0NjczMzI',
+    ),
+    3 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396014,
+      'mime' => 'image/png',
+      'read' => 1,
+      'write' => 1,
+      'size' => '355921',
+      'hash' => 't1_b2JqZWN0cy80MzY0NjczMzIvdGV4dHVyZXMvU3RhbmRhcmRfMV9iYXNlQ29sb3IucG5n',
+      'name' => 'Standard_1_baseColor.png',
+      'phash' => 't1_b2JqZWN0cy80MzY0NjczMzIvdGV4dHVyZXM',
+      'tmb' => 1,
+    ),
+    4 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396014,
+      'mime' => 'image/png',
+      'read' => 1,
+      'write' => 1,
+      'size' => '424603',
+      'hash' => 't1_b2JqZWN0cy80MzY0NjczMzIvdGV4dHVyZXMvU3RhbmRhcmRfMV9ub3JtYWwucG5n',
+      'name' => 'Standard_1_normal.png',
+      'phash' => 't1_b2JqZWN0cy80MzY0NjczMzIvdGV4dHVyZXM',
+      'tmb' => 1,
+    ),
+    5 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396932,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 't1_b2JqZWN0cy80MzY0NjczMzIvdGV4dHVyZXM',
+      'name' => 'textures',
+      'phash' => 't1_b2JqZWN0cy80MzY0NjczMzI',
+      'volumeid' => 't1_',
+      'url' => NULL,
+    ),
+    6 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396932,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 't1_b2JqZWN0cy80MzY0NjczMzI',
+      'name' => '436467332',
+      'phash' => 't1_b2JqZWN0cw',
+      'volumeid' => 't1_',
+      'url' => NULL,
+    ),
+  ),
+  'removed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396014,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cy80MzY0NjczMzI',
+      'name' => '436467332',
+      'phash' => 'l1_b2JqZWN0cw',
+      'volumeid' => 'l1_',
+      'dirs' => 1,
+      'realpath' => 'C:\\xampp\\htdocs\\localbeaty\\wp-content\\plugins\\ar-plugin\\file_manager\\objects\\436467332',
+    ),
+  ),
+) 
+[Tue, 03 Dec 2019 21:15:38 +0300] RM: array (
+  'removed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396932,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 't1_b2JqZWN0cw',
+      'name' => 'objects',
+      'phash' => 't1_Lw',
+      'volumeid' => 't1_',
+      'dirs' => 1,
+      'url' => NULL,
+      'realpath' => 'C:\\xampp\\htdocs\\localbeaty\\wp-content\\plugins\\ar-plugin\\vendor\\elfinder\\files\\.trash\\objects',
+    ),
+  ),
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396938,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 't1_Lw',
+      'name' => 'Trash',
+      'rootRev' => '',
+      'options' => 
+      array (
+        'path' => '',
+        'url' => '',
+        'tmbUrl' => '/localbeaty/wp-content/plugins/ar-plugin/vendor/elfinder/php/../files/.trash/.tmb/',
+        'disabled' => 
+        array (
+          0 => 'archive',
+          1 => 'duplicate',
+          2 => 'edit',
+          3 => 'extract',
+          4 => 'mkfile',
+          5 => 'places',
+          6 => 'put',
+          7 => 'rename',
+          8 => 'resize',
+          9 => 'upload',
+          10 => 'chmod',
+        ),
+        'separator' => '\\',
+        'copyOverwrite' => 0,
+        'uploadOverwrite' => 1,
+        'uploadMaxSize' => 9223372036854775807,
+        'uploadMaxConn' => 3,
+        'uploadMime' => 
+        array (
+          'firstOrder' => 'deny',
+          'allow' => 
+          array (
+            0 => 'application/octet-stream',
+            1 => 'model/gltf-binary',
+            2 => 'model/gltf',
+            3 => 'image/x-ms-bmp',
+            4 => 'image/gif',
+            5 => 'image/jpeg',
+            6 => 'image/png',
+            7 => 'image/x-icon',
+            8 => 'text/plain',
+            9 => 'text/x-php',
+            10 => 'application/zip',
+          ),
+          'deny' => 
+          array (
+            0 => 'all',
+          ),
+        ),
+        'dispInlineRegex' => '^(?:(?:video|audio)|image/(?!.+\\+xml)|application/(?:ogg|x-mpegURL|dash\\+xml)|(?:text/plain|application/pdf)$)',
+        'jpgQuality' => 100,
+        'archivers' => 
+        array (
+          'create' => 
+          array (
+            0 => 'application/zip',
+          ),
+          'extract' => 
+          array (
+            0 => 'application/zip',
+          ),
+          'createext' => 
+          array (
+            'application/zip' => 'zip',
+          ),
+        ),
+        'uiCmdMap' => 
+        array (
+          'paste' => 'hidden',
+          'mkdir' => 'hidden',
+          'copy' => 'restore',
+        ),
+        'syncChkAsTs' => 1,
+        'syncMinMs' => 10000,
+        'i18nFolderName' => 0,
+        'tmbCrop' => 1,
+        'substituteImg' => true,
+        'onetimeUrl' => false,
+        'csscls' => 'elfinder-navbar-root-trash',
+      ),
+      'volumeid' => 't1_',
+      'locked' => 1,
+      'url' => NULL,
+      'isroot' => 1,
+      'phash' => '',
+    ),
+  ),
+) 
+[Tue, 03 Dec 2019 21:15:44 +0300] MKDIR: array (
+  'added' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396944,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 't1_b2JqZWN0cw',
+      'name' => 'objects',
+      'phash' => 't1_Lw',
+      'volumeid' => 't1_',
+      'url' => NULL,
+    ),
+  ),
+  'hashes' => 
+  array (
+    '/objects' => 't1_b2JqZWN0cw',
+  ),
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396944,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 't1_Lw',
+      'name' => 'Trash',
+      'rootRev' => '',
+      'options' => 
+      array (
+        'path' => '',
+        'url' => '',
+        'tmbUrl' => '/localbeaty/wp-content/plugins/ar-plugin/vendor/elfinder/php/../files/.trash/.tmb/',
+        'disabled' => 
+        array (
+          0 => 'archive',
+          1 => 'duplicate',
+          2 => 'edit',
+          3 => 'extract',
+          4 => 'mkfile',
+          5 => 'places',
+          6 => 'put',
+          7 => 'rename',
+          8 => 'resize',
+          9 => 'upload',
+          10 => 'chmod',
+        ),
+        'separator' => '\\',
+        'copyOverwrite' => 0,
+        'uploadOverwrite' => 1,
+        'uploadMaxSize' => 9223372036854775807,
+        'uploadMaxConn' => 3,
+        'uploadMime' => 
+        array (
+          'firstOrder' => 'deny',
+          'allow' => 
+          array (
+            0 => 'application/octet-stream',
+            1 => 'model/gltf-binary',
+            2 => 'model/gltf',
+            3 => 'image/x-ms-bmp',
+            4 => 'image/gif',
+            5 => 'image/jpeg',
+            6 => 'image/png',
+            7 => 'image/x-icon',
+            8 => 'text/plain',
+            9 => 'text/x-php',
+            10 => 'application/zip',
+          ),
+          'deny' => 
+          array (
+            0 => 'all',
+          ),
+        ),
+        'dispInlineRegex' => '^(?:(?:video|audio)|image/(?!.+\\+xml)|application/(?:ogg|x-mpegURL|dash\\+xml)|(?:text/plain|application/pdf)$)',
+        'jpgQuality' => 100,
+        'archivers' => 
+        array (
+          'create' => 
+          array (
+            0 => 'application/zip',
+          ),
+          'extract' => 
+          array (
+            0 => 'application/zip',
+          ),
+          'createext' => 
+          array (
+            'application/zip' => 'zip',
+          ),
+        ),
+        'uiCmdMap' => 
+        array (
+          'paste' => 'hidden',
+          'mkdir' => 'hidden',
+          'copy' => 'restore',
+        ),
+        'syncChkAsTs' => 1,
+        'syncMinMs' => 10000,
+        'i18nFolderName' => 0,
+        'tmbCrop' => 1,
+        'substituteImg' => true,
+        'onetimeUrl' => false,
+        'csscls' => 'elfinder-navbar-root-trash',
+      ),
+      'volumeid' => 't1_',
+      'locked' => 1,
+      'dirs' => 1,
+      'url' => NULL,
+      'isroot' => 1,
+      'phash' => '',
+    ),
+  ),
+) 
+[Tue, 03 Dec 2019 21:15:44 +0300] PASTE: array (
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396944,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 't1_b2JqZWN0cw',
+      'name' => 'objects',
+      'phash' => 't1_Lw',
+      'volumeid' => 't1_',
+      'dirs' => 1,
+      'url' => NULL,
+    ),
+  ),
+  'added' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396944,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 't1_b2JqZWN0cy9jdWJv',
+      'name' => 'cubo',
+      'phash' => 't1_b2JqZWN0cw',
+      'volumeid' => 't1_',
+      'dirs' => 1,
+      'url' => NULL,
+    ),
+    1 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575321519,
+      'mime' => 'application/octet-stream',
+      'read' => 1,
+      'write' => 1,
+      'size' => '17280',
+      'hash' => 't1_b2JqZWN0cy9jdWJvL3NjZW5lLmJpbg',
+      'name' => 'scene.bin',
+      'phash' => 't1_b2JqZWN0cy9jdWJv',
+    ),
+    2 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575321523,
+      'mime' => 'text/plain',
+      'read' => 1,
+      'write' => 1,
+      'size' => '22136',
+      'hash' => 't1_b2JqZWN0cy9jdWJvL3NjZW5lLmdsdGY',
+      'name' => 'scene.gltf',
+      'phash' => 't1_b2JqZWN0cy9jdWJv',
+    ),
+    3 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575320859,
+      'mime' => 'image/jpeg',
+      'read' => 1,
+      'write' => 1,
+      'size' => '77395',
+      'hash' => 't1_b2JqZWN0cy9jdWJvL3RleHR1cmVzL2N1Ym9fTUFURVJJQUxfYmFzZUNvbG9yLmpwZWc',
+      'name' => 'cubo_MATERIAL_baseColor.jpeg',
+      'phash' => 't1_b2JqZWN0cy9jdWJvL3RleHR1cmVz',
+      'tmb' => 1,
+    ),
+    4 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575320859,
+      'mime' => 'image/jpeg',
+      'read' => 1,
+      'write' => 1,
+      'size' => '87897',
+      'hash' => 't1_b2JqZWN0cy9jdWJvL3RleHR1cmVzL2xhbWJlcnQzX2Jhc2VDb2xvci5qcGVn',
+      'name' => 'lambert3_baseColor.jpeg',
+      'phash' => 't1_b2JqZWN0cy9jdWJvL3RleHR1cmVz',
+      'tmb' => 1,
+    ),
+    5 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575320859,
+      'mime' => 'image/jpeg',
+      'read' => 1,
+      'write' => 1,
+      'size' => '98856',
+      'hash' => 't1_b2JqZWN0cy9jdWJvL3RleHR1cmVzL2xhbWJlcnQ0X2Jhc2VDb2xvci5qcGVn',
+      'name' => 'lambert4_baseColor.jpeg',
+      'phash' => 't1_b2JqZWN0cy9jdWJvL3RleHR1cmVz',
+      'tmb' => 1,
+    ),
+    6 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575320859,
+      'mime' => 'image/jpeg',
+      'read' => 1,
+      'write' => 1,
+      'size' => '67435',
+      'hash' => 't1_b2JqZWN0cy9jdWJvL3RleHR1cmVzL2xhbWJlcnQ1X2Jhc2VDb2xvci5qcGVn',
+      'name' => 'lambert5_baseColor.jpeg',
+      'phash' => 't1_b2JqZWN0cy9jdWJvL3RleHR1cmVz',
+      'tmb' => 1,
+    ),
+    7 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575320859,
+      'mime' => 'image/jpeg',
+      'read' => 1,
+      'write' => 1,
+      'size' => '101225',
+      'hash' => 't1_b2JqZWN0cy9jdWJvL3RleHR1cmVzL2xhbWJlcnQ3X2Jhc2VDb2xvci5qcGVn',
+      'name' => 'lambert7_baseColor.jpeg',
+      'phash' => 't1_b2JqZWN0cy9jdWJvL3RleHR1cmVz',
+      'tmb' => 1,
+    ),
+    8 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396944,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 't1_b2JqZWN0cy9jdWJvL3RleHR1cmVz',
+      'name' => 'textures',
+      'phash' => 't1_b2JqZWN0cy9jdWJv',
+      'volumeid' => 't1_',
+      'url' => NULL,
+    ),
+    9 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396944,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 't1_b2JqZWN0cy9jdWJv',
+      'name' => 'cubo',
+      'phash' => 't1_b2JqZWN0cw',
+      'volumeid' => 't1_',
+      'url' => NULL,
+    ),
+  ),
+  'removed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575321523,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cy9jdWJv',
+      'name' => 'cubo',
+      'phash' => 'l1_b2JqZWN0cw',
+      'volumeid' => 'l1_',
+      'dirs' => 1,
+      'realpath' => 'C:\\xampp\\htdocs\\localbeaty\\wp-content\\plugins\\ar-plugin\\file_manager\\objects\\cubo',
+    ),
+  ),
+) 
+[Tue, 03 Dec 2019 21:15:49 +0300] RM: array (
+  'removed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396944,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 't1_b2JqZWN0cw',
+      'name' => 'objects',
+      'phash' => 't1_Lw',
+      'volumeid' => 't1_',
+      'dirs' => 1,
+      'url' => NULL,
+      'realpath' => 'C:\\xampp\\htdocs\\localbeaty\\wp-content\\plugins\\ar-plugin\\vendor\\elfinder\\files\\.trash\\objects',
+    ),
+  ),
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396949,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 't1_Lw',
+      'name' => 'Trash',
+      'rootRev' => '',
+      'options' => 
+      array (
+        'path' => '',
+        'url' => '',
+        'tmbUrl' => '/localbeaty/wp-content/plugins/ar-plugin/vendor/elfinder/php/../files/.trash/.tmb/',
+        'disabled' => 
+        array (
+          0 => 'archive',
+          1 => 'duplicate',
+          2 => 'edit',
+          3 => 'extract',
+          4 => 'mkfile',
+          5 => 'places',
+          6 => 'put',
+          7 => 'rename',
+          8 => 'resize',
+          9 => 'upload',
+          10 => 'chmod',
+        ),
+        'separator' => '\\',
+        'copyOverwrite' => 0,
+        'uploadOverwrite' => 1,
+        'uploadMaxSize' => 9223372036854775807,
+        'uploadMaxConn' => 3,
+        'uploadMime' => 
+        array (
+          'firstOrder' => 'deny',
+          'allow' => 
+          array (
+            0 => 'application/octet-stream',
+            1 => 'model/gltf-binary',
+            2 => 'model/gltf',
+            3 => 'image/x-ms-bmp',
+            4 => 'image/gif',
+            5 => 'image/jpeg',
+            6 => 'image/png',
+            7 => 'image/x-icon',
+            8 => 'text/plain',
+            9 => 'text/x-php',
+            10 => 'application/zip',
+          ),
+          'deny' => 
+          array (
+            0 => 'all',
+          ),
+        ),
+        'dispInlineRegex' => '^(?:(?:video|audio)|image/(?!.+\\+xml)|application/(?:ogg|x-mpegURL|dash\\+xml)|(?:text/plain|application/pdf)$)',
+        'jpgQuality' => 100,
+        'archivers' => 
+        array (
+          'create' => 
+          array (
+            0 => 'application/zip',
+          ),
+          'extract' => 
+          array (
+            0 => 'application/zip',
+          ),
+          'createext' => 
+          array (
+            'application/zip' => 'zip',
+          ),
+        ),
+        'uiCmdMap' => 
+        array (
+          'paste' => 'hidden',
+          'mkdir' => 'hidden',
+          'copy' => 'restore',
+        ),
+        'syncChkAsTs' => 1,
+        'syncMinMs' => 10000,
+        'i18nFolderName' => 0,
+        'tmbCrop' => 1,
+        'substituteImg' => true,
+        'onetimeUrl' => false,
+        'csscls' => 'elfinder-navbar-root-trash',
+      ),
+      'volumeid' => 't1_',
+      'locked' => 1,
+      'url' => NULL,
+      'isroot' => 1,
+      'phash' => '',
+    ),
+  ),
+) 
+[Tue, 03 Dec 2019 21:16:20 +0300] MKDIR: array (
+  'added' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396980,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 't1_aW1hZ2Vz',
+      'name' => 'images',
+      'phash' => 't1_Lw',
+      'volumeid' => 't1_',
+      'url' => NULL,
+    ),
+  ),
+  'hashes' => 
+  array (
+    '/images' => 't1_aW1hZ2Vz',
+  ),
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396980,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 't1_Lw',
+      'name' => 'Trash',
+      'rootRev' => '',
+      'options' => 
+      array (
+        'path' => '',
+        'url' => '',
+        'tmbUrl' => '/localbeaty/wp-content/plugins/ar-plugin/vendor/elfinder/php/../files/.trash/.tmb/',
+        'disabled' => 
+        array (
+          0 => 'archive',
+          1 => 'duplicate',
+          2 => 'edit',
+          3 => 'extract',
+          4 => 'mkfile',
+          5 => 'places',
+          6 => 'put',
+          7 => 'rename',
+          8 => 'resize',
+          9 => 'upload',
+          10 => 'chmod',
+        ),
+        'separator' => '\\',
+        'copyOverwrite' => 0,
+        'uploadOverwrite' => 1,
+        'uploadMaxSize' => 9223372036854775807,
+        'uploadMaxConn' => 3,
+        'uploadMime' => 
+        array (
+          'firstOrder' => 'deny',
+          'allow' => 
+          array (
+            0 => 'application/octet-stream',
+            1 => 'model/gltf-binary',
+            2 => 'model/gltf',
+            3 => 'image/x-ms-bmp',
+            4 => 'image/gif',
+            5 => 'image/jpeg',
+            6 => 'image/png',
+            7 => 'image/x-icon',
+            8 => 'text/plain',
+            9 => 'text/x-php',
+            10 => 'application/zip',
+          ),
+          'deny' => 
+          array (
+            0 => 'all',
+          ),
+        ),
+        'dispInlineRegex' => '^(?:(?:video|audio)|image/(?!.+\\+xml)|application/(?:ogg|x-mpegURL|dash\\+xml)|(?:text/plain|application/pdf)$)',
+        'jpgQuality' => 100,
+        'archivers' => 
+        array (
+          'create' => 
+          array (
+            0 => 'application/zip',
+          ),
+          'extract' => 
+          array (
+            0 => 'application/zip',
+          ),
+          'createext' => 
+          array (
+            'application/zip' => 'zip',
+          ),
+        ),
+        'uiCmdMap' => 
+        array (
+          'paste' => 'hidden',
+          'mkdir' => 'hidden',
+          'copy' => 'restore',
+        ),
+        'syncChkAsTs' => 1,
+        'syncMinMs' => 10000,
+        'i18nFolderName' => 0,
+        'tmbCrop' => 1,
+        'substituteImg' => true,
+        'onetimeUrl' => false,
+        'csscls' => 'elfinder-navbar-root-trash',
+      ),
+      'volumeid' => 't1_',
+      'locked' => 1,
+      'dirs' => 1,
+      'url' => NULL,
+      'isroot' => 1,
+      'phash' => '',
+    ),
+  ),
+) 
+[Tue, 03 Dec 2019 21:16:20 +0300] PASTE: array (
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396980,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 't1_aW1hZ2Vz',
+      'name' => 'images',
+      'phash' => 't1_Lw',
+      'volumeid' => 't1_',
+      'url' => NULL,
+    ),
+  ),
+  'added' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1574538756,
+      'mime' => 'image/jpeg',
+      'read' => 1,
+      'write' => 1,
+      'size' => '387050',
+      'hash' => 't1_aW1hZ2VzL2RlaW1vc09uU291bmRjbG91ZF8xOTExMjMxOTUyMzYuanBn',
+      'name' => 'deimosOnSoundcloud_191123195236.jpg',
+      'phash' => 't1_aW1hZ2Vz',
+      'tmb' => 1,
+    ),
+    1 => 
+    array (
+      'isowner' => false,
+      'ts' => 1574531385,
+      'mime' => 'image/jpeg',
+      'read' => 1,
+      'write' => 1,
+      'size' => '387050',
+      'hash' => 't1_aW1hZ2VzL2RlaW1vc09uU291bmRjbG91ZC5qcGc',
+      'name' => 'deimosOnSoundcloud.jpg',
+      'phash' => 't1_aW1hZ2Vz',
+      'tmb' => 1,
+    ),
+    2 => 
+    array (
+      'isowner' => false,
+      'ts' => 1574538771,
+      'mime' => 'image/jpeg',
+      'read' => 1,
+      'write' => 1,
+      'size' => '780831',
+      'hash' => 't1_aW1hZ2VzL0tvYWxhLmpwZw',
+      'name' => 'Koala.jpg',
+      'phash' => 't1_aW1hZ2Vz',
+      'tmb' => 1,
+    ),
+    3 => 
+    array (
+      'isowner' => false,
+      'ts' => 1574538756,
+      'mime' => 'image/jpeg',
+      'read' => 1,
+      'write' => 1,
+      'size' => '387050',
+      'hash' => 't1_aW1hZ2VzL2RlaW1vc09uU291bmRjbG91ZF8xOTExMjMxOTUyMzYuanBn',
+      'name' => 'deimosOnSoundcloud_191123195236.jpg',
+      'phash' => 't1_aW1hZ2Vz',
+      'tmb' => 1,
+    ),
+    4 => 
+    array (
+      'isowner' => false,
+      'ts' => 1574531385,
+      'mime' => 'image/jpeg',
+      'read' => 1,
+      'write' => 1,
+      'size' => '387050',
+      'hash' => 't1_aW1hZ2VzL2RlaW1vc09uU291bmRjbG91ZC5qcGc',
+      'name' => 'deimosOnSoundcloud.jpg',
+      'phash' => 't1_aW1hZ2Vz',
+      'tmb' => 1,
+    ),
+    5 => 
+    array (
+      'isowner' => false,
+      'ts' => 1574538771,
+      'mime' => 'image/jpeg',
+      'read' => 1,
+      'write' => 1,
+      'size' => '780831',
+      'hash' => 't1_aW1hZ2VzL0tvYWxhLmpwZw',
+      'name' => 'Koala.jpg',
+      'phash' => 't1_aW1hZ2Vz',
+      'tmb' => 1,
+    ),
+  ),
+  'removed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1574538756,
+      'mime' => 'image/jpeg',
+      'read' => 1,
+      'write' => 1,
+      'size' => '387050',
+      'hash' => 'l1_aW1hZ2VzL2RlaW1vc09uU291bmRjbG91ZF8xOTExMjMxOTUyMzYuanBn',
+      'name' => 'deimosOnSoundcloud_191123195236.jpg',
+      'phash' => 'l1_aW1hZ2Vz',
+      'tmb' => 'l1_aW1hZ2VzL2RlaW1vc09uU291bmRjbG91ZF8xOTExMjMxOTUyMzYuanBn1574538756.png',
+    ),
+    1 => 
+    array (
+      'isowner' => false,
+      'ts' => 1574531385,
+      'mime' => 'image/jpeg',
+      'read' => 1,
+      'write' => 1,
+      'size' => '387050',
+      'hash' => 'l1_aW1hZ2VzL2RlaW1vc09uU291bmRjbG91ZC5qcGc',
+      'name' => 'deimosOnSoundcloud.jpg',
+      'phash' => 'l1_aW1hZ2Vz',
+      'tmb' => 'l1_aW1hZ2VzL2RlaW1vc09uU291bmRjbG91ZC5qcGc1574531385.png',
+    ),
+    2 => 
+    array (
+      'isowner' => false,
+      'ts' => 1574538771,
+      'mime' => 'image/jpeg',
+      'read' => 1,
+      'write' => 1,
+      'size' => '780831',
+      'hash' => 'l1_aW1hZ2VzL0tvYWxhLmpwZw',
+      'name' => 'Koala.jpg',
+      'phash' => 'l1_aW1hZ2Vz',
+      'tmb' => 'l1_aW1hZ2VzL0tvYWxhLmpwZw1574538771.png',
+    ),
+  ),
+) 
+[Tue, 03 Dec 2019 21:16:24 +0300] RM: array (
+  'removed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396980,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 't1_aW1hZ2Vz',
+      'name' => 'images',
+      'phash' => 't1_Lw',
+      'volumeid' => 't1_',
+      'url' => NULL,
+      'realpath' => 'C:\\xampp\\htdocs\\localbeaty\\wp-content\\plugins\\ar-plugin\\vendor\\elfinder\\files\\.trash\\images',
+    ),
+  ),
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1575396984,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 't1_Lw',
+      'name' => 'Trash',
+      'rootRev' => '',
+      'options' => 
+      array (
+        'path' => '',
+        'url' => '',
+        'tmbUrl' => '/localbeaty/wp-content/plugins/ar-plugin/vendor/elfinder/php/../files/.trash/.tmb/',
+        'disabled' => 
+        array (
+          0 => 'archive',
+          1 => 'duplicate',
+          2 => 'edit',
+          3 => 'extract',
+          4 => 'mkfile',
+          5 => 'places',
+          6 => 'put',
+          7 => 'rename',
+          8 => 'resize',
+          9 => 'upload',
+          10 => 'chmod',
+        ),
+        'separator' => '\\',
+        'copyOverwrite' => 0,
+        'uploadOverwrite' => 1,
+        'uploadMaxSize' => 9223372036854775807,
+        'uploadMaxConn' => 3,
+        'uploadMime' => 
+        array (
+          'firstOrder' => 'deny',
+          'allow' => 
+          array (
+            0 => 'application/octet-stream',
+            1 => 'model/gltf-binary',
+            2 => 'model/gltf',
+            3 => 'image/x-ms-bmp',
+            4 => 'image/gif',
+            5 => 'image/jpeg',
+            6 => 'image/png',
+            7 => 'image/x-icon',
+            8 => 'text/plain',
+            9 => 'text/x-php',
+            10 => 'application/zip',
+          ),
+          'deny' => 
+          array (
+            0 => 'all',
+          ),
+        ),
+        'dispInlineRegex' => '^(?:(?:video|audio)|image/(?!.+\\+xml)|application/(?:ogg|x-mpegURL|dash\\+xml)|(?:text/plain|application/pdf)$)',
+        'jpgQuality' => 100,
+        'archivers' => 
+        array (
+          'create' => 
+          array (
+            0 => 'application/zip',
+          ),
+          'extract' => 
+          array (
+            0 => 'application/zip',
+          ),
+          'createext' => 
+          array (
+            'application/zip' => 'zip',
+          ),
+        ),
+        'uiCmdMap' => 
+        array (
+          'paste' => 'hidden',
+          'mkdir' => 'hidden',
+          'copy' => 'restore',
+        ),
+        'syncChkAsTs' => 1,
+        'syncMinMs' => 10000,
+        'i18nFolderName' => 0,
+        'tmbCrop' => 1,
+        'substituteImg' => true,
+        'onetimeUrl' => false,
+        'csscls' => 'elfinder-navbar-root-trash',
+      ),
+      'volumeid' => 't1_',
+      'locked' => 1,
+      'url' => NULL,
+      'isroot' => 1,
+      'phash' => '',
+    ),
+  ),
+) 
+[Sun, 05 Jan 2020 19:48:12 +0300] MKDIR: array (
+  'added' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1578242892,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyaw',
+      'name' => 'great_white_shark',
+      'phash' => 'l1_b2JqZWN0cw',
+      'volumeid' => 'l1_',
+    ),
+    1 => 
+    array (
+      'isowner' => false,
+      'ts' => 1578242892,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyay90ZXh0dXJlcw',
+      'name' => 'textures',
+      'phash' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyaw',
+      'volumeid' => 'l1_',
+    ),
+  ),
+  'hashes' => 
+  array (
+    '/great_white_shark' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyaw',
+    '/great_white_shark/textures' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyay90ZXh0dXJlcw',
+  ),
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1578242892,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cw',
+      'name' => 'objects',
+      'phash' => 'l1_Lw',
+      'volumeid' => 'l1_',
+      'dirs' => 1,
+    ),
+  ),
+) 
+[Sun, 05 Jan 2020 19:48:13 +0300] UPLOAD: array (
+  'added' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1578242892,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyaw',
+      'name' => 'great_white_shark',
+      'phash' => 'l1_b2JqZWN0cw',
+      'volumeid' => 'l1_',
+      'dirs' => 1,
+    ),
+    1 => 
+    array (
+      'isowner' => false,
+      'ts' => 1578242893,
+      'mime' => 'application/octet-stream',
+      'read' => 1,
+      'write' => 1,
+      'size' => '1325916',
+      'hash' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyay9zY2VuZS5iaW4',
+      'name' => 'scene.bin',
+      'phash' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyaw',
+      'url' => '/localbeaty/wp-content/plugins/ar-plugin/vendor/elfinder/php/../../../file_manager/objects/great_white_shark/scene.bin',
+    ),
+  ),
+  'removed' => 
+  array (
+  ),
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1578242892,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cw',
+      'name' => 'objects',
+      'phash' => 'l1_Lw',
+      'volumeid' => 'l1_',
+      'dirs' => 1,
+    ),
+  ),
+) 
+[Sun, 05 Jan 2020 19:48:13 +0300] UPLOAD: array (
+  'added' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1578242892,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyay90ZXh0dXJlcw',
+      'name' => 'textures',
+      'phash' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyaw',
+      'volumeid' => 'l1_',
+    ),
+    1 => 
+    array (
+      'isowner' => false,
+      'ts' => 1578242893,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyaw',
+      'name' => 'great_white_shark',
+      'phash' => 'l1_b2JqZWN0cw',
+      'volumeid' => 'l1_',
+      'dirs' => 1,
+    ),
+    2 => 
+    array (
+      'isowner' => false,
+      'ts' => 1578242893,
+      'mime' => 'image/png',
+      'read' => 1,
+      'write' => 1,
+      'size' => '713563',
+      'hash' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyay90ZXh0dXJlcy9NYXRlcmlhbC4wMDRfbWV0YWxsaWNSb3VnaG5lc3MucG5n',
+      'name' => 'Material.004_metallicRoughness.png',
+      'phash' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyay90ZXh0dXJlcw',
+      'tmb' => 1,
+      'url' => '/localbeaty/wp-content/plugins/ar-plugin/vendor/elfinder/php/../../../file_manager/objects/great_white_shark/textures/Material.004_metallicRoughness.png',
+    ),
+  ),
+  'removed' => 
+  array (
+  ),
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1578242892,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cw',
+      'name' => 'objects',
+      'phash' => 'l1_Lw',
+      'volumeid' => 'l1_',
+      'dirs' => 1,
+    ),
+  ),
+) 
+[Sun, 05 Jan 2020 19:48:13 +0300] UPLOAD: array (
+  'added' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1578242893,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyaw',
+      'name' => 'great_white_shark',
+      'phash' => 'l1_b2JqZWN0cw',
+      'volumeid' => 'l1_',
+      'dirs' => 1,
+    ),
+    1 => 
+    array (
+      'isowner' => false,
+      'ts' => 1578242893,
+      'mime' => 'application/octet-stream',
+      'read' => 1,
+      'write' => 1,
+      'size' => '1155245',
+      'hash' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyay9zY2VuZS5nbHRm',
+      'name' => 'scene.gltf',
+      'phash' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyaw',
+      'url' => '/localbeaty/wp-content/plugins/ar-plugin/vendor/elfinder/php/../../../file_manager/objects/great_white_shark/scene.gltf',
+    ),
+    2 => 
+    array (
+      'isowner' => false,
+      'ts' => 1578242893,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyay90ZXh0dXJlcw',
+      'name' => 'textures',
+      'phash' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyaw',
+      'volumeid' => 'l1_',
+    ),
+    3 => 
+    array (
+      'isowner' => false,
+      'ts' => 1578242893,
+      'mime' => 'image/jpeg',
+      'read' => 1,
+      'write' => 1,
+      'size' => '531069',
+      'hash' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyay90ZXh0dXJlcy9NYXRlcmlhbC4wMDRfYmFzZUNvbG9yLmpwZWc',
+      'name' => 'Material.004_baseColor.jpeg',
+      'phash' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyay90ZXh0dXJlcw',
+      'tmb' => 1,
+      'url' => '/localbeaty/wp-content/plugins/ar-plugin/vendor/elfinder/php/../../../file_manager/objects/great_white_shark/textures/Material.004_baseColor.jpeg',
+    ),
+  ),
+  'removed' => 
+  array (
+  ),
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1578242892,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cw',
+      'name' => 'objects',
+      'phash' => 'l1_Lw',
+      'volumeid' => 'l1_',
+      'dirs' => 1,
+    ),
+  ),
+) 
+[Sun, 05 Jan 2020 19:48:13 +0300] UPLOAD: array (
+  'added' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1578242893,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyay90ZXh0dXJlcw',
+      'name' => 'textures',
+      'phash' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyaw',
+      'volumeid' => 'l1_',
+    ),
+    1 => 
+    array (
+      'isowner' => false,
+      'ts' => 1578242893,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyaw',
+      'name' => 'great_white_shark',
+      'phash' => 'l1_b2JqZWN0cw',
+      'volumeid' => 'l1_',
+      'dirs' => 1,
+    ),
+    2 => 
+    array (
+      'isowner' => false,
+      'ts' => 1578242893,
+      'mime' => 'image/png',
+      'read' => 1,
+      'write' => 1,
+      'size' => '1660743',
+      'hash' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyay90ZXh0dXJlcy9NYXRlcmlhbC4wMDRfbm9ybWFsLnBuZw',
+      'name' => 'Material.004_normal.png',
+      'phash' => 'l1_b2JqZWN0cy9ncmVhdF93aGl0ZV9zaGFyay90ZXh0dXJlcw',
+      'tmb' => 1,
+      'url' => '/localbeaty/wp-content/plugins/ar-plugin/vendor/elfinder/php/../../../file_manager/objects/great_white_shark/textures/Material.004_normal.png',
+    ),
+  ),
+  'removed' => 
+  array (
+  ),
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1578242892,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cw',
+      'name' => 'objects',
+      'phash' => 'l1_Lw',
+      'volumeid' => 'l1_',
+      'dirs' => 1,
+    ),
+  ),
+) 
+[Tue, 07 Jan 2020 21:20:30 +0300] UPLOAD: array (
+  'added' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1578421230,
+      'mime' => 'image/jpeg',
+      'read' => 1,
+      'write' => 1,
+      'size' => '387050',
+      'hash' => 'l1_b2JqZWN0cy9kZWltb3NPblNvdW5kY2xvdWQuanBn',
+      'name' => 'deimosOnSoundcloud.jpg',
+      'phash' => 'l1_b2JqZWN0cw',
+      'tmb' => 1,
+      'url' => '/localbeaty/wp-content/plugins/ar-plugin/vendor/elfinder/php/../../../file_manager/objects/deimosOnSoundcloud.jpg',
+    ),
+  ),
+  'removed' => 
+  array (
+  ),
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1578421230,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_b2JqZWN0cw',
+      'name' => 'objects',
+      'phash' => 'l1_Lw',
+      'volumeid' => 'l1_',
+      'dirs' => 1,
+    ),
+  ),
+) 
+[Sun, 16 Jul 2023 23:37:11 +0300] UPLOAD: array (
+  'added' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1689539831,
+      'mime' => 'image/jpeg',
+      'read' => 1,
+      'write' => 1,
+      'size' => '2348242',
+      'hash' => 'l1_aW1hZ2VzL3RyZXgtaW1hZ2UtYmlnLmpwZWc',
+      'name' => 'trex-image-big.jpeg',
+      'phash' => 'l1_aW1hZ2Vz',
+      'tmb' => 1,
+      'url' => '/wp-content/plugins/augmented-reality/vendor/elfinder/php/../../../file_manager/images/trex-image-big.jpeg',
+    ),
+  ),
+  'removed' => 
+  array (
+  ),
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1689539831,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_aW1hZ2Vz',
+      'name' => 'images',
+      'phash' => 'l1_Lw',
+      'volumeid' => 'l1_',
+    ),
+  ),
+) 
+[Sun, 16 Jul 2023 23:37:58 +0300] UPLOAD: array (
+  'added' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1689539878,
+      'mime' => 'image/png',
+      'read' => 1,
+      'write' => 1,
+      'size' => '115515',
+      'hash' => 'l1_bWFya2Vycy9oaXJvLnBuZw',
+      'name' => 'hiro.png',
+      'phash' => 'l1_bWFya2Vycw',
+      'tmb' => 1,
+      'url' => '/wp-content/plugins/augmented-reality/vendor/elfinder/php/../../../file_manager/markers/hiro.png',
+    ),
+  ),
+  'removed' => 
+  array (
+  ),
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1689539878,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_bWFya2Vycw',
+      'name' => 'markers',
+      'phash' => 'l1_Lw',
+      'volumeid' => 'l1_',
+    ),
+  ),
+) 
+[Mon, 17 Jul 2023 00:56:50 +0300] UPLOAD: array (
+  'added' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1689544610,
+      'mime' => 'image/jpeg',
+      'read' => 1,
+      'write' => 1,
+      'size' => '2348242',
+      'hash' => 'l1_bWFya2Vycy90cmV4LWltYWdlLWJpZy5qcGVn',
+      'name' => 'trex-image-big.jpeg',
+      'phash' => 'l1_bWFya2Vycw',
+      'tmb' => 1,
+      'url' => '/wp-content/plugins/augmented-reality/vendor/elfinder/php/../../../file_manager/markers/trex-image-big.jpeg',
+    ),
+  ),
+  'removed' => 
+  array (
+  ),
+  'changed' => 
+  array (
+    0 => 
+    array (
+      'isowner' => false,
+      'ts' => 1689544610,
+      'mime' => 'directory',
+      'read' => 1,
+      'write' => 1,
+      'size' => 0,
+      'hash' => 'l1_bWFya2Vycw',
+      'name' => 'markers',
+      'phash' => 'l1_Lw',
+      'volumeid' => 'l1_',
+    ),
+  ),
+) 

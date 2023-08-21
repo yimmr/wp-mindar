@@ -1,0 +1,174 @@
+#pl_ar_panel {
+    position: relative;
+    overflow: auto;
+    margin: 16px 0;
+    padding: 23px 10px 0;
+    border: 1px solid 
+    #e5e5e5;
+    box-shadow: 0 1px 1px
+    rgba(0,0,0,.04);
+    background:
+    #fff;
+    font-size: 13px;
+    line-height: 2.1em;
+}
+
+.pl_ar_object_box {
+  margin: 20px;
+  width: 500px; 
+  height: 150px; 
+  -webkit-border-radius: 8px/7px; 
+  -moz-border-radius: 8px/7px; 
+  border-radius: 8px/7px; 
+  background-color: #ebebeb; 
+  -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+  -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+  box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+  border: solid 1px #cbc9c9;
+  float: left;
+}
+
+/* Style the close button (span) */
+.pl_wp_close_div {
+  clear: both;
+  float: right;
+  width:15px;
+  height:15px;  
+  display: table;
+  margin-top: 25px;
+  margin-right: 10px;
+  padding: 5px;
+  border: solid 1px #cbc9c9;
+  cursor: pointer;
+  transform: translate(0%, -50%);
+}
+
+.pl_wp_close_div:hover {
+  background: #bbb;
+}
+.pl_wp_closex{
+ text-align:center; 
+ vertical-align: middle;
+ display: table-cell;
+}
+
+form{
+  margin: 0 30px;
+}
+
+
+hr{
+  color: #a9a9a9;
+  opacity: 0.3;
+}
+
+input[type=text]{
+  width: 200px; 
+  height: 39px; 
+  -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
+  -moz-border-radius: 0px 4px 4px 0px/0px 0px 4px 4px; 
+  border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
+  background-color: #fff; 
+  -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+  -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+  box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+  border: solid 1px #cbc9c9;
+  margin-left: 30px;
+  margin-top: 20px; 
+  padding-left: 10px;
+}
+
+input[type=password]{
+  margin-bottom: 25px;
+}
+
+.pl_ar_head_title{
+margin-left: 10px;
+}
+
+.pl_ar_button {
+  width: 80px;
+  background-color: #3a57af;
+  padding: 8px;
+  margin-left: 10px;
+  margin-right:10px;
+  -webkit-border-radius: 4px 4px 4px 4px; 
+  -moz-border-radius: 4px 4px 4px 4px; 
+  border-radius: 4px 4px 4px 4px;
+  color: white;
+  -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.09);
+  -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+  box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+  border: solid 0px #cbc9c9;
+  transition: all 0.1s linear 0s; 
+}
+
+.pl_ar_button:hover {
+  top: 3px;
+  background-color:#2e458b;
+  -webkit-box-shadow: none; 
+  -moz-box-shadow: none; 
+  box-shadow: none; 
+}
+.pl_ar_button_dat {
+  background-color: #3a57af;
+  padding: 2px;
+  margin-left: 3px;
+  margin-right:3px;
+  -webkit-border-radius: 4px 4px 4px 4px; 
+  -moz-border-radius: 4px 4px 4px 4px; 
+  border-radius: 4px 4px 4px 4px;
+  color: white;
+  -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.09);
+  -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+  box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+  border: solid 0px #cbc9c9;
+  transition: all 0.1s linear 0s; 
+}
+.pl_ar_button_dat:hover {
+  top: 3px;
+  background-color:#2e458b;
+  -webkit-box-shadow: none; 
+  -moz-box-shadow: none; 
+  box-shadow: none; 
+}
+.pl_ar_button_box{
+  margin: 20px 0px 20px 0px;
+  display:inline-block;
+  width: auto;
+}
+
+.pl_ar_shortcode_button_box{
+  clear:both;
+  margin-left: 40px;
+}
+
+.pl_ar_shortcode_box{
+  clear: both;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: auto;
+  padding: 10px; 
+  opacity:0;
+}
+
+.pl_ar_txt {
+  width:auto;
+  height: auto;
+  padding: 10px;
+  position: relative;
+  color: white;
+  font-size: large;
+  clear:both;
+  -webkit-border-radius: 4px 4px 4px 4px; 
+  -moz-border-radius: 4px 4px 4px 4px; 
+  border-radius: 4px 4px 4px 4px;
+  
+  -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.09);
+  -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+  box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+  background-color:#2e458b;
+
+}
+
