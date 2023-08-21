@@ -103,13 +103,13 @@ class ARPage
             $makerFileName = substr($makerURL, 0, strrpos($makerURL, '.'));
             $object = [
                 'type'      => 'gltf-model',
+                'src'       => $object['gltf-model'],
+                'animation' => 'property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate',
                 'rotation'  => '0 0 0 ',
                 'position'  => '0 0 0.1',
                 'scale'     => '0.005 0.005 0.005',
-                'src'       => $object['gltf-model'],
-                'animation' => 'property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate',
             ];
-            $data['target_src'] = $makerFileName.'.mid';
+            $data['target_src'] = $makerFileName.'.mind';
         }
 
         $marker = ['url' => \PL_AR_LINK.$makerURL, 'type' => 'patt' == $makerExt ? 'pattern' : ''];
