@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const el = document.querySelector(selector);
         el?.addEventListener('click', function () {
             arSystem.switchCamera();
+            console.log(arSystem, 111);
         });
     }
 });

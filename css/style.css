@@ -5,9 +5,19 @@
     background: none;
     height: 30px;
     z-index: 2;
+    --ar-controls-text-color: #fff;
 }
 
 .ar-controls-container .buttons {
     display: flex;
     justify-content: right;
+    padding: 1rem;
+}
+
+.ar-controls-container .buttons button {
+    background: none;
+    border: 2px solid var(--ar-controls-text-color);
+    border-radius: 2px;
+    color: var(--ar-controls-text-color);
+    font-weight: bolder;
 }
