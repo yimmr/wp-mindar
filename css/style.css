@@ -11,6 +11,7 @@
     display: flex;
     justify-content: right;
     padding: 1rem;
+    gap: 0.5rem;
 }
 
 .ar-controls-container .buttons button {
