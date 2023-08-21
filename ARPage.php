@@ -84,8 +84,9 @@ class ARPage
                     'type'            => 'entity',
                     'animation-mixer' => true,
                     'gltf-model'      => '#'.$srcId,
-                    'position'        => '0 0 0.1',
                     'scale'           => '0.007 0.007 0.007',
+                    'rotation'        => '0 0 0 ',
+                    'position'        => '0 0 0.1',
                 ];
                 break;
             default:break;
@@ -99,13 +100,16 @@ class ARPage
 
         $makerExt = pathinfo($makerURL, PATHINFO_EXTENSION);
 
+        if ('entity' == $object['type'] && ('image' == $type || 'face' == $type)) {
+            $object['type'] = 'gltf-model';
+            $object['animation'] = 'property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate';
+            $object['src'] = $object['gltf-model'];
+            unset($object['gltf-model']);
+        }
+
         if ('image' == $type) {
             $makerFileName = substr($makerURL, 0, strrpos($makerURL, '.'));
-            $object = [
-                'type'      => 'gltf-model',
-                'src'       => $object['gltf-model'],
-                'animation' => 'property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate',
-            ];
+
             $data['target_src'] = \PL_AR_LINK.$makerFileName.'.mind';
         }
 
