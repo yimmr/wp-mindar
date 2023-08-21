@@ -21,7 +21,7 @@ add_action('wp_enqueue_scripts', function () use ($type) {
             // \wp_enqueue_script('aframe_min', PL_AR_LINK.'js/aframe-master.min.js', [], '1.3.0');
             // \wp_enqueue_script('aframe-ar-nft', PL_AR_LINK.'js/aframe-ar-nft.js');
             \wp_enqueue_script('aframe_min', PL_AR_LINK.'js/aframe-1.4.min.js', [], '1.4.2');
-            \wp_enqueue_script('mindar-image-aframe', PL_AR_LINK.'js/mindar-image-aframe.prod.js');
+            \wp_enqueue_script('mindar-image-aframe', PL_AR_LINK.'js/mindar-face-aframe.prod.js');
             break;
         case 'location':
             \wp_enqueue_script('aframe_min', PL_AR_LINK.'js/aframe.min.js', [], '1.3.0');
