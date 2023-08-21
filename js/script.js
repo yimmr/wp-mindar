@@ -27,14 +27,14 @@ document.addEventListener('DOMContentLoaded', function () {
     if (sceneEl == null) return;
 
     sceneEl.addEventListener('loaded', function () {
-        const arSystem = sceneEl.systems['mindar-face-system'];
+        const arSystem = sceneEl.systems['mindar-image-system'];
         console.log('Scene loaded.');
         switchCameraButton('#switch-camera-button', arSystem);
     });
 
     function switchCameraButton(selector, arSystem) {
+        if (!arSystem) return;
         const el = document.querySelector(selector);
-        console.log(el);
         el?.addEventListener('click', function () {
             arSystem.switchCamera();
             console.log(arSystem, 111);
