@@ -102,7 +102,6 @@ class ARPage
 
         if ('entity' == $object['type'] && ('image' == $type || 'face' == $type)) {
             $object['type'] = 'gltf-model';
-            $object['position'] = '0 0 0';
             // $object['animation'] = 'property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate';
             $object['src'] = $object['gltf-model'];
             unset($object['gltf-model']);
@@ -115,6 +114,7 @@ class ARPage
         }
 
         $object = array_merge($object, $attrs);
+        $object['position'] = '0 0 0';
         $marker = ['url' => \PL_AR_LINK.$makerURL, 'type' => 'patt' == $makerExt ? 'pattern' : ''];
 
         return compact('marker', 'object');
