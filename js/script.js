@@ -37,11 +37,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         switchCameraButton('#switch-camera-button', arSystem);
         takePhotoButton('#take-photo-button');
-        recordVideoButton('#record-photo-button');
+        recordVideoButton('#record-video-button');
     });
 
     function switchCameraButton(selector, arSystem) {
-        console.log(arSystem);
         if (!arSystem) return;
 
         const el = document.querySelector(selector);
@@ -52,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function takePhotoButton(selector) {
         const el = document.querySelector(selector);
-        el?.addEventListener('click', takePhoto);
+        el?.addEventListener('click', () => takePhoto(sceneEl));
     }
 
     function recordVideoButton(selector) {
@@ -128,15 +127,19 @@ document.addEventListener('DOMContentLoaded', function () {
         const mediaRecorder = new MediaRecorder(canvas.captureStream(), { mimeType: fileType });
         const chunks = [];
 
-        navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
-            video.srcObject = stream;
-            video.play();
-            function render() {
-                context.drawImage(video, 0, 0, canvas.width, canvas.height);
-                requestAnimationFrame(render);
-            }
-            render();
-        });
+        // navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
+        //     video.srcObject = stream;
+        //     video.play();
+
+        //     render();
+        // });
+        let isRecording = false;
+
+        function render() {
+            if (!isRecording) return;
+            context.drawImage(video, 0, 0, width, height);
+            requestAnimationFrame(render);
+        }
 
         // 监听录制数据事件
         mediaRecorder.ondataavailable = function (event) {
@@ -145,6 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // 监听录制结束事件
         mediaRecorder.onstop = function () {
+            isRecording = false;
             const videoBlob = new Blob(chunks, { type: fileType });
             const link = document.createElement('a');
             link.href = URL.createObjectURL(videoBlob);
@@ -152,7 +156,10 @@ document.addEventListener('DOMContentLoaded', function () {
             link.click();
         };
 
-        mediaRecorder.onstart = function () {};
+        mediaRecorder.onstart = function () {
+            isRecording = true;
+            render();
+        };
 
         return mediaRecorder;
     }
