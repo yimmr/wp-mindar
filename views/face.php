@@ -1,4 +1,4 @@
-<a-scene mindar-face="autoStart: true" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights"
+<a-scene mindar-face embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights"
          vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
     <?php require_once __DIR__.'/assets.php'; ?>
     <?php foreach ($pageData['items'] as $item) {?>
@@ -6,7 +6,7 @@
         <?php echo $arPage->buildObjectHTML($item['object']); ?>
     </a-entity>
     <?php }?>
-    <a-camera active="false"></a-camera>
+    <a-camera active="false" position="0 0 0"></a-camera>
 </a-scene>
 <div id="ar-controls-container" class="ar-controls-container">
     <div class="buttons">
