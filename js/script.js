@@ -67,10 +67,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 if (mediaRecorder.state === 'recording') {
                     mediaRecorder.stop();
-                    el.textContent = 'Stop Recording';
+                    el.textContent = rawText;
                 } else {
                     mediaRecorder.start();
-                    el.textContent = rawText;
+                    el.textContent = 'Stop Recording';
                 }
             } catch (error) {
                 alert(error);
@@ -152,10 +152,10 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log('data available after MediaRecorder.stop() called.');
 
             const filename = prompt('Enter a name for your sound clip', 'video');
-            const videoBlob = new Blob(chunks, { type: 'video/mp4' });
+            const videoBlob = new Blob(chunks, { type: videoType });
             const link = document.createElement('a');
             link.href = URL.createObjectURL(videoBlob);
-            link.download = filename + '.mp4';
+            link.download = filename + '.' + videoType.split('/').pop();
             link.click();
 
             console.log('recorder stopped');
