@@ -58,8 +58,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const el = document.querySelector(selector + '');
         if (!el) return;
         const rawText = el.textContent;
-        const mediaRecorder = createVideoRecorder();
+        let mediaRecorder;
         el.addEventListener('click', function () {
+            mediaRecorder ||= createVideoRecorder();
+            if (!mediaRecorder) return;
             if (mediaRecorder.state === 'recording') {
                 mediaRecorder.stop();
                 el.textContent = 'Stop Recording';
@@ -96,15 +98,10 @@ document.addEventListener('DOMContentLoaded', function () {
             height
         );
 
-        if (window.navigator.msSaveOrOpenBlob) {
-            var blobObject = canvas.msToBlob();
-            window.navigator.msSaveOrOpenBlob(blobObject, filename);
-        } else {
-            const link = document.createElement('a');
-            link.href = canvas.toDataURL('image/png');
-            link.download = filename;
-            link.click();
-        }
+        const link = document.createElement('a');
+        link.href = canvas.toDataURL('image/png');
+        link.download = filename;
+        link.click();
 
         video.play();
     }
