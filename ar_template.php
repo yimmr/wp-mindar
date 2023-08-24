@@ -19,7 +19,7 @@ add_action('wp_enqueue_scripts', function () use ($type) {
     switch ($type) {
         case 'face':
             \wp_enqueue_script('aframe_min', PL_AR_LINK.'js/aframe-1.4.min.js', [], '1.4.2');
-            \wp_enqueue_script('mindar-image-aframe', PL_AR_LINK.'js/mindar-face-aframe.prod.js');
+            \wp_enqueue_script('mindar-face-aframe', PL_AR_LINK.'js/mindar-face-aframe.prod.js');
             break;
         case 'image':
             \wp_enqueue_script('aframe_min', PL_AR_LINK.'js/aframe-1.4.min.js', [], '1.4.2');
