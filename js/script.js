@@ -125,18 +125,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const video = document.querySelector('video');
         if (video == null) throw new Error('Media not found.');
 
-        // const canvas = document.createElement('canvas');
-        // const context = canvas.getContext('2d');
-        // let width = video.clientWidth;
-        // let height = video.clientHeight;
-        // canvas.width = width;
-        // canvas.height = height;
-        // let isRecording = false;
-        // function render() {
-        //     if (!isRecording) return;
-        //     context.drawImage(video, 0, 0, width, height);
-        //     requestAnimationFrame(render);
-        // }
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+        let width = video.clientWidth;
+        let height = video.clientHeight;
+        canvas.width = width;
+        canvas.height = height;
 
         let videoType = '';
         if (
@@ -146,7 +140,14 @@ document.addEventListener('DOMContentLoaded', function () {
             throw new Error('Not support recording');
         }
 
-        const mediaRecorder = new MediaRecorder(stream, { mimeType: videoType });
+        const mediaRecorder = new MediaRecorder(canvas.captureStream(), { mimeType: videoType });
+
+        function render() {
+            if (mediaRecorder.state === 'recording') {
+                context.drawImage(video, 0, 0, width, height);
+                requestAnimationFrame(render);
+            }
+        }
 
         mediaRecorder.onstop = (e) => {
             console.log('data available after MediaRecorder.stop() called.');
@@ -166,6 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         return {
             start() {
+                render();
                 mediaRecorder.start();
                 console.log(mediaRecorder.state);
                 console.log('recorder started');
