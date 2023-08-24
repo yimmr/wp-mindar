@@ -104,6 +104,7 @@ class ARPage
             $object['type'] = 'gltf-model';
             // $object['animation'] = 'property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate';
             $object['src'] = $object['gltf-model'];
+            $object['src'] = 'https://github.com/hiukim/mind-ar-js/blob/master/examples/face-tracking/assets/glasses/scene.gltf';
             unset($object['gltf-model']);
         }
 
