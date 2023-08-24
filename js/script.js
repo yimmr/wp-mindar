@@ -68,11 +68,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (mediaRecorder.state === 'recording') {
                     mediaRecorder.stop();
                     el.textContent = rawText;
-                    el.style['--ar-controls-text-color'] = undefined;
+                    el.classList.remove('btn-red');
                 } else {
                     mediaRecorder.start();
                     el.textContent = 'Stop Recording';
-                    el.style['--ar-controls-text-color'] = 'red';
+                    el.classList.add('btn-red');
                 }
             } catch (error) {
                 alert(error);

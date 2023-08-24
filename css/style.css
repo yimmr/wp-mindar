@@ -7,6 +7,10 @@
     --ar-controls-text-color: #fff;
 }
 
+.buttons button.btn-red {
+    --ar-controls-text-color: red;
+}
+
 .ar-controls-container .buttons {
     display: flex;
     justify-content: right;
