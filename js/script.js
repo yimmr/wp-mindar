@@ -68,9 +68,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (mediaRecorder.state === 'recording') {
                     mediaRecorder.stop();
                     el.textContent = rawText;
+                    el.style['--ar-controls-text-color'] = undefined;
                 } else {
                     mediaRecorder.start();
                     el.textContent = 'Stop Recording';
+                    el.style['--ar-controls-text-color'] = 'red';
                 }
             } catch (error) {
                 alert(error);
@@ -108,6 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
         link.href = canvas.toDataURL('image/png');
         link.download = filename;
         link.click();
+        window.URL.revokeObjectURL(link.href);
 
         video.play();
     }
@@ -125,13 +128,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const video = document.querySelector('video');
         if (video == null) throw new Error('Media not found.');
 
-        const canvas = document.createElement('canvas');
-        const context = canvas.getContext('2d');
-        let width = video.clientWidth;
-        let height = video.clientHeight;
-        canvas.width = width;
-        canvas.height = height;
-
         let videoType = '';
         if (
             !MediaRecorder.isTypeSupported((videoType = 'video/mp4')) &&
@@ -140,24 +136,19 @@ document.addEventListener('DOMContentLoaded', function () {
             throw new Error('Not support recording');
         }
 
-        const mediaRecorder = new MediaRecorder(canvas.captureStream(), { mimeType: videoType });
-
-        function render() {
-            if (mediaRecorder.state === 'recording') {
-                context.drawImage(video, 0, 0, width, height);
-                requestAnimationFrame(render);
-            }
-        }
+        const mediaRecorder = new MediaRecorder(video.captureStream(), { mimeType: videoType });
 
         mediaRecorder.onstop = (e) => {
             console.log('data available after MediaRecorder.stop() called.');
 
             const filename = prompt('Enter a name for your sound clip', 'video');
             const videoBlob = new Blob(chunks, { type: videoType });
+            const url = URL.createObjectURL(videoBlob);
             const link = document.createElement('a');
-            link.href = URL.createObjectURL(videoBlob);
+            link.href = url;
             link.download = filename + '.' + videoType.split('/').pop();
             link.click();
+            window.URL.revokeObjectURL(url);
 
             console.log('recorder stopped');
         };
@@ -165,9 +156,22 @@ document.addEventListener('DOMContentLoaded', function () {
             chunks.push(e_1.data);
         };
 
+        // const canvas = document.createElement('canvas');
+        // const context = canvas.getContext('2d');
+        // let width = video.clientWidth;
+        // let height = video.clientHeight;
+        // canvas.width = width;
+        // canvas.height = height;
+        // function render() {
+        //     if (mediaRecorder.state === 'recording') {
+        //         context.drawImage(video, 0, 0, width, height);
+        //         requestAnimationFrame(render);
+        //     }
+        // }
+
         return {
             start() {
-                render();
+                // render();
                 mediaRecorder.start();
                 console.log(mediaRecorder.state);
                 console.log('recorder started');
