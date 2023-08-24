@@ -6,7 +6,7 @@
         <?php echo $arPage->buildObjectHTML($item['object']); ?>
     </a-entity>
     <?php }?>
-    <a-camera position="0 0 0" active="false"></a-camera>></a-camera>
+    <a-camera active="false"></a-camera>
 </a-scene>
 <div id="ar-controls-container" class="ar-controls-container">
     <div class="buttons">

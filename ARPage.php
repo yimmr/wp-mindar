@@ -114,7 +114,7 @@ class ARPage
         }
 
         $object = array_merge($object, $attrs);
-        $object['position'] = '10 0 0';
+        $object['position'] = '0 0 0';
         $marker = ['url' => \PL_AR_LINK.$makerURL, 'type' => 'patt' == $makerExt ? 'pattern' : ''];
 
         return compact('marker', 'object');
