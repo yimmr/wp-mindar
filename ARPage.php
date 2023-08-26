@@ -74,9 +74,9 @@ class ARPage
     public function face(&$data, $objects, $attrs = [])
     {
         $data['items'] = $this->buildObjectsData($objects, $attrs);
-
         $data['target_src'] = [];
-        $data['items'] = array_map(function (&$item) use (&$data) {
+
+        foreach ($data['items'] as &$item) {
             $item['object']['animation'] = 'property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate';
             $item['object']['type'] = 'gltf-model';
             $item['object']['src'] = $item['object']['gltf-model'];
@@ -86,7 +86,7 @@ class ARPage
                 $target = substr($item['marker']['url'], 0, strrpos($item['marker']['url'], '.'));
                 $data['target_src'][] = $target.'.mind';
             }
-        }, $data['items']);
+        }
     }
 
     public function image(&$data, $objects, $attrs = [])
