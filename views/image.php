@@ -1,3 +1,7 @@
+<?php if (isset($pageData['isMindar']) && $pageData['isMindar']) {
+    require_once 'image-mind.php';
+    return;
+} ?>
 <div class="arjs-loader">
     <div>Loading, please wait...</div>
 </div>

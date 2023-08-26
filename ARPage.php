@@ -73,25 +73,46 @@ class ARPage
 
     public function face(&$data, $objects, $attrs = [])
     {
-        $data['items'] = $this->buildObjectsData($objects, $attrs);
-        $data['target_src'] = [];
+        $anchor = [];
 
-        foreach ($data['items'] as &$item) {
+        if (isset($attrs['anchor'])) {
+            $anchor = explode(' ', $attrs['anchor']);
+            unset($attrs['anchor']);
+        }
+
+        $data['items'] = $this->buildObjectsData($objects, $attrs);
+
+        foreach ($data['items'] as $i => &$item) {
             $item['object']['animation'] = 'property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate';
             $item['object']['type'] = 'gltf-model';
             $item['object']['src'] = $item['object']['gltf-model'];
             unset($item['object']['gltf-model']);
 
-            if ($item['marker'] && (!$item['marker']['type'] || 'image' == $item['marker']['type'])) {
-                $target = substr($item['marker']['url'], 0, strrpos($item['marker']['url'], '.'));
-                $data['target_src'][] = $target.'.mind';
-            }
+            $item['anchorIndex'] = $anchor[$i] ?? 1;
         }
     }
 
     public function image(&$data, $objects, $attrs = [])
     {
-        $data['items'] = $this->buildObjectsData($objects, $attrs);
+        $useMindar = false;
+        if (isset($attrs['mindar'])) {
+            $useMindar = true;
+            unset($attrs['mindar']);
+        }
+
+        if ($data['isMindar'] = $useMindar) {
+            // 基本一样
+            $this->face($data, $objects, $attrs);
+            $item = reset($data['items']);
+            $data['target_src'] = '';
+
+            if ($item['marker'] && (!$item['marker']['type'] || 'image' == $item['marker']['type'])) {
+                $target = substr($item['marker']['url'], 0, strrpos($item['marker']['url'], '.'));
+                $data['target_src'] = $target.'.mind';
+            }
+        } else {
+            $data['items'] = $this->buildObjectsData($objects, $attrs);
+        }
     }
 
     public function marker(&$data, $objects, $attrs = [])

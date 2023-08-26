@@ -1,8 +1,9 @@
 <a-scene mindar-face color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights"
          vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
     <?php require_once __DIR__.'/assets.php'; ?>
-    <?php foreach ($pageData['items'] as $i => $item) {?>
-    <a-entity mindar-face-target="anchorIndex: <?php echo $i + 1; ?>">
+    <?php foreach ($pageData['items'] as $item) {?>
+    <a-entity
+              mindar-face-target="anchorIndex: <?php echo $item['anchorIndex'] ?? 1; ?>">
         <?php echo $arPage->buildObjectHTML($item['object']); ?>
     </a-entity>
     <?php }?>

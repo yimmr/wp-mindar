@@ -15,15 +15,20 @@ if (empty($type)) {
 add_action('wp_ajax_pl_ar_new_page', 'pl_ar_new_page');
 add_action('wp_ajax_nopriv_pl_ar_new_page', 'pl_ar_new_page');
 
-add_action('wp_enqueue_scripts', function () use ($type) {
+add_action('wp_enqueue_scripts', function () use ($type, &$pageData) {
     switch ($type) {
         case 'face':
             \wp_enqueue_script('aframe_min', PL_AR_LINK.'js/aframe-1.4.min.js', [], '1.4.2');
             \wp_enqueue_script('mindar-face-aframe', PL_AR_LINK.'js/mindar-face-aframe.prod.js');
             break;
         case 'image':
-            \wp_enqueue_script('aframe_min', PL_AR_LINK.'js/aframe-1.4.min.js', [], '1.4.2');
-            \wp_enqueue_script('mindar-image-aframe', PL_AR_LINK.'js/mindar-image-aframe.prod.js');
+            if (isset($pageData['isMindar']) && $pageData['isMindar']) {
+                \wp_enqueue_script('aframe_min', PL_AR_LINK.'js/aframe-1.4.min.js', [], '1.4.2');
+                \wp_enqueue_script('mindar-image-aframe', PL_AR_LINK.'js/mindar-image-aframe.prod.js');
+            } else {
+                \wp_enqueue_script('aframe_min', PL_AR_LINK.'js/aframe-master.min.js', [], '1.3.0');
+                \wp_enqueue_script('aframe-ar-nft', PL_AR_LINK.'js/aframe-ar-nft.js');
+            }
             break;
         case 'location':
             \wp_enqueue_script('aframe_min', PL_AR_LINK.'js/aframe.min.js', [], '1.3.0');
