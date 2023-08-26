@@ -172,8 +172,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const canvasStream = canvas.captureStream();
 
             recorder = new MediaRecorder(
-                // new MediaStream([...stream.getVideoTracks(), ...canvasStream.getVideoTracks()]),
-                canvas.captureStream(),
+                new MediaStream([...stream.getVideoTracks(), ...canvasStream.getVideoTracks()]),
                 { mimeType: videoType }
             );
 
