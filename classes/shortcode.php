@@ -149,15 +149,15 @@ class pl_ar_Shortcode  {
 	  $data = $atts; 
 	  unset($data['id'], $data['name'],$data['text-color'],$data['color']);
 
-	  foreach ([
-		  'scale'    => '0.05 0.05 0.05',
-		  'rotation' => '0 0 0',
-		  'position' => '0 0 0',
-	  ] as $key => $value) {
-		  if (!isset($data[$key]) || '' == $data[$key]) {
-			  $data[$key] = $value;
-		  }
-	  }
+	//   foreach ([
+	// 	  'scale'    => '0.05 0.05 0.05',
+	// 	  'rotation' => '0 0 0',
+	// 	  'position' => '0 0 0',
+	//   ] as $key => $value) {
+	// 	  if (!isset($data[$key]) || '' == $data[$key]) {
+	// 		  $data[$key] = $value;
+	// 	  }
+	//   }
 
 	  if ('location' == $data['type']) {
 		  $data['look-at'] = $data['look-at'] ?? '[gps-camera]';
