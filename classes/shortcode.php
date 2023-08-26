@@ -150,7 +150,7 @@ class pl_ar_Shortcode  {
 	  unset($data['id'], $data['name'],$data['text-color'],$data['color']);
 
 	  foreach ([
-		//   'scale'    => '0.03 0.03 0.03',
+		  'scale'    => '0.03 0.03 0.03',
 		  'rotation' => '0 0 0',
 		  'position' => '0 0 0',
 	  ] as $key => $value) {
@@ -168,7 +168,7 @@ class pl_ar_Shortcode  {
 	  foreach ($data as $key => $value) {
 		if(is_int($key)){
 			$key=$value;
-			$value=true;
+			$value="true";
 		}
 		  $dataStr .= ' data-'.$key.'="'.$value.'"';
 	  }

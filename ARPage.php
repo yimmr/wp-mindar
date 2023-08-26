@@ -71,7 +71,7 @@ class ARPage
         return \apply_filters('pl_wpar_page_current_data', $data);
     }
 
-    public function face(&$data, $objects, $attrs = [])
+    public function face(&$data, $objects, $attrs = [], $defaultAnchor = 1)
     {
         $anchor = [];
 
@@ -88,7 +88,7 @@ class ARPage
             $item['object']['src'] = $item['object']['gltf-model'];
             unset($item['object']['gltf-model']);
 
-            $item['anchorIndex'] = $anchor[$i] ?? 1;
+            $item['anchorIndex'] = $anchor[$i] ?? $defaultAnchor;
         }
     }
 
@@ -102,7 +102,7 @@ class ARPage
 
         if ($data['isMindar'] = $useMindar) {
             // 基本一样
-            $this->face($data, $objects, $attrs);
+            $this->face($data, $objects, $attrs, 0);
             $item = reset($data['items']);
             $data['target_src'] = '';
 
