@@ -3,7 +3,7 @@
     <?php require_once __DIR__.'/assets.php'; ?>
     <?php foreach ($pageData['items'] as $item) {?>
     <a-entity
-              mindar-face-target="anchorIndex: <?php echo $item['anchorIndex'] ?? 1; ?>">
+              mindar-face-target="targetIndex: <?php echo $item['targetIndex'] ?? 0; ?>">
         <?php echo $arPage->buildObjectHTML($item['object']); ?>
     </a-entity>
     <?php }?>

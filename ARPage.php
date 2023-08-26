@@ -71,13 +71,19 @@ class ARPage
         return \apply_filters('pl_wpar_page_current_data', $data);
     }
 
-    public function face(&$data, $objects, $attrs = [], $defaultAnchor = 1)
+    public function face(&$data, $objects, $attrs = [])
     {
-        $anchor = [];
+        $this->mindar($data, $objects, $attrs);
+    }
 
-        if (isset($attrs['anchor'])) {
-            $anchor = explode(' ', $attrs['anchor']);
-            unset($attrs['anchor']);
+    protected function mindar(&$data, $objects, $attrs = [], $defaultIndex = 1)
+    {
+        $indexType = 'image' == $data['type'] ? 'target' : 'anchor';
+        $index = [];
+
+        if (isset($attrs[$indexType])) {
+            $index = explode(' ', $attrs[$indexType]);
+            unset($attrs[$indexType]);
         }
 
         $data['items'] = $this->buildObjectsData($objects, $attrs);
@@ -88,7 +94,7 @@ class ARPage
             $item['object']['src'] = $item['object']['gltf-model'];
             unset($item['object']['gltf-model']);
 
-            $item['anchorIndex'] = $anchor[$i] ?? $defaultAnchor;
+            $item[$indexType.'Index'] = $index[$i] ?? $defaultIndex;
         }
     }
 
@@ -102,7 +108,7 @@ class ARPage
 
         if ($data['isMindar'] = $useMindar) {
             // 基本一样
-            $this->face($data, $objects, $attrs, 0);
+            $this->mindar($data, $objects, $attrs, 0);
             $item = reset($data['items']);
             $data['target_src'] = '';
 
