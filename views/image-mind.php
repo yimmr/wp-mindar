@@ -5,7 +5,6 @@
     <?php foreach ($pageData['items'] as $item) {?>
     <a-entity
               mindar-image-target="targetIndex: <?php echo $item['targetIndex'] ?? 0; ?>">
-        <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
         <?php echo $arPage->buildObjectHTML($item['object']); ?>
     </a-entity>
     <?php }?>
