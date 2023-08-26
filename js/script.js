@@ -190,12 +190,11 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
-        init();
-
         return {
             start() {
                 if (!ended) return;
                 ended = false;
+                init();
                 chunks = [];
                 recorder.start();
                 console.log(recorder.state);
