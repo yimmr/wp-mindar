@@ -120,14 +120,6 @@ document.addEventListener('DOMContentLoaded', function () {
             throw new Error('Not support recording');
         }
 
-        const constraints = { audio: true };
-        const chunks = [];
-
-        const stream = await navigator.mediaDevices.getUserMedia(constraints);
-
-        const video = document.querySelector('video');
-        if (video == null) throw new Error('Media not found.');
-
         let videoType = '';
         if (
             !MediaRecorder.isTypeSupported((videoType = 'video/mp4')) &&
@@ -136,42 +128,60 @@ document.addEventListener('DOMContentLoaded', function () {
             throw new Error('Not support recording');
         }
 
-        const mediaRecorder = new MediaRecorder(
-            scene.components.screenshot.canvas.captureStream(),
-            { mimeType: videoType }
-        );
+        let recorder = null;
 
-        mediaRecorder.onstop = (e) => {
-            console.log('data available after MediaRecorder.stop() called.');
+        function init() {
+            const chunks = [];
+            const video = document.querySelector('video');
+            if (video == null) throw new Error('Media not found.');
 
-            const filename = prompt('Enter a name for your sound clip', 'video');
-            const videoBlob = new Blob(chunks, { type: videoType });
-            const url = URL.createObjectURL(videoBlob);
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = filename + '.' + videoType.split('/').pop();
-            link.click();
-            window.URL.revokeObjectURL(url);
+            const stream = video.captureStream();
+            const canvas = scene.components.screenshot.getCanvas('perspective');
+            const canvasStream = canvas.captureStream();
 
-            console.log('recorder stopped');
-        };
-        mediaRecorder.ondataavailable = (e_1) => {
-            chunks.push(e_1.data);
-        };
+            // const constraints = { audio: true };
+            // const stream = await navigator.mediaDevices.getUserMedia(constraints);
+
+            recorder = new MediaRecorder(
+                [new MediaStream([...stream.getVideoTracks(), ...canvasStream.getVideoTracks()])],
+                { mimeType: videoType }
+            );
+
+            recorder.addEventListener('dataavailable', function (e) {
+                if (e.data.size > 0) chunks.push(e.data);
+            });
+
+            recorder.addEventListener('stop', function () {
+                console.log('data available after MediaRecorder.stop() called.');
+
+                const filename = prompt('Enter a name for your sound clip', 'video');
+                const videoBlob = new Blob(chunks, { type: videoType });
+                const url = URL.createObjectURL(videoBlob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = filename + '.' + videoType.split('/').pop();
+                link.click();
+                window.URL.revokeObjectURL(url);
+
+                console.log('recorder stopped');
+            });
+        }
 
         return {
             start() {
-                mediaRecorder.start();
-                console.log(mediaRecorder.state);
+                init();
+                recorder.start();
+                console.log(recorder.state);
                 console.log('recorder started');
             },
             stop() {
-                mediaRecorder.stop();
-                console.log(mediaRecorder.state);
+                if (!recorder) return;
+                recorder.stop();
+                console.log(recorder.state);
                 console.log('recorder stopped');
             },
             get state() {
-                return mediaRecorder.state;
+                return recorder ? recorder.state : '';
             },
         };
     }
