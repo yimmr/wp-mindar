@@ -86,6 +86,7 @@ class ARPage
             unset($attrs[$indexType]);
         }
 
+        $attrs['scale'] ??= '0.03 0.03 0.03';
         $data['items'] = $this->buildObjectsData($objects, $attrs);
 
         foreach ($data['items'] as $i => &$item) {
@@ -141,7 +142,11 @@ class ARPage
     {
         $items = [];
         foreach ($objects as $arr) {
-            $object = array_merge($this->parseObject($arr['object']), $attrs);
+            $object = array_merge([
+                'scale'    => '0.05 0.05 0.05',
+                'rotation' => '0 0 0',
+                'position' => '0 0 0',
+            ], $this->parseObject($arr['object']), $attrs);
             $marker = [];
 
             if ($arr['marker']) {
