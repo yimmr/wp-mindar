@@ -145,16 +145,16 @@ document.addEventListener('DOMContentLoaded', function () {
             const top = videoStyle.getPropertyValue('top');
 
             video.addEventListener('play', () => drawCanvas());
-            video.paused || drawCanvas();
+            drawCanvas();
 
             // 绘制canvas内容到视频画面上
             function drawCanvas() {
                 if (video.paused || video.ended) return;
 
-                // context.clearRect(0, 0, canvas.width, canvas.height);
-                // context.drawImage(video, 0, parseFloat(top), canvas.width, canvas.height);
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                context.drawImage(video, 0, parseFloat(top), canvas.width, canvas.height);
                 context.drawImage(
-                    scene.components.screenshot.canvas,
+                    scene.components.screenshot.getCanvas('perspective'),
                     0,
                     0,
                     canvas.width,
@@ -168,10 +168,11 @@ document.addEventListener('DOMContentLoaded', function () {
             // const stream = await navigator.mediaDevices.getUserMedia(constraints);
 
             const stream = video.captureStream();
-            const canvasStream = document.querySelector('.a-canvas').captureStream();
+            const canvasStream = canvas.captureStream();
 
             recorder = new MediaRecorder(
-                new MediaStream([...stream.getVideoTracks(), ...canvasStream.getVideoTracks()]),
+                // new MediaStream([...stream.getVideoTracks(), ...canvasStream.getVideoTracks()]),
+                canvas.captureStream(),
                 { mimeType: videoType }
             );
 
