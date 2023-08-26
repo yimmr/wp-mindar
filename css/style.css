@@ -1,6 +1,10 @@
+body {
+    background-color: rgb(0 0 0 / 90%);
+}
+
 .ar-controls-container {
     position: fixed;
-    top: 0;
+    bottom: 12px;
     right: 0;
     background: none;
     z-index: 999;
