@@ -137,12 +137,41 @@ document.addEventListener('DOMContentLoaded', function () {
             const video = document.querySelector('video');
             if (video == null) throw new Error('Media not found.');
 
-            const stream = video.captureStream();
-            const canvas = scene.components.screenshot.canvas;
-            const canvasStream = canvas.captureStream();
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            canvas.width = video.clientWidth;
+            canvas.height = video.clientHeight;
+            const videoStyle = window.getComputedStyle(video);
+            const top = videoStyle.getPropertyValue('top');
+
+            video.addEventListener('play', function () {
+                drawCanvas();
+            });
+
+            video.paused || drawCanvas();
+
+            // 绘制canvas内容到视频画面上
+            function drawCanvas() {
+                if (video.paused || video.ended) return;
+
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                context.drawImage(video, 0, parseFloat(top), canvas.width, canvas.height);
+                context.drawImage(
+                    scene.components.screenshot.getCanvas('perspective'),
+                    0,
+                    0,
+                    canvas.width,
+                    canvas.height
+                );
+
+                requestAnimationFrame(drawCanvas);
+            }
 
             // const constraints = { audio: true };
             // const stream = await navigator.mediaDevices.getUserMedia(constraints);
+
+            const stream = video.captureStream();
+            const canvasStream = canvas.captureStream();
 
             recorder = new MediaRecorder(
                 new MediaStream([...stream.getVideoTracks(), ...canvasStream.getVideoTracks()]),
