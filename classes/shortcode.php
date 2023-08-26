@@ -166,7 +166,11 @@ class pl_ar_Shortcode  {
 	 
 	  $dataStr = '';
 	  foreach ($data as $key => $value) {
-		  $dataStr .=is_int($key) ? ' '.$value: ' data-'.$key.'="'.$value.'"';
+		if(is_int($key)){
+			$key=$value;
+			$value=true;
+		}
+		  $dataStr .= ' data-'.$key.'="'.$value.'"';
 	  }
 
 	  return '<input type="button" class="ar_button" style="'.$style.'" id="'.$atts['id'].'" value="'.$atts['name'].'"'.$dataStr.'/>';
