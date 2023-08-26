@@ -82,7 +82,7 @@ class ARPage
             $item['object']['src'] = $item['object']['gltf-model'];
             unset($item['object']['gltf-model']);
 
-            if ($item['marker']) {
+            if ($item['marker'] && (!$item['marker']['type'] || 'image' == $item['marker']['type'])) {
                 $target = substr($item['marker']['url'], 0, strrpos($item['marker']['url'], '.'));
                 $data['target_src'][] = $target.'.mind';
             }
