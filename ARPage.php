@@ -90,7 +90,7 @@ class ARPage
         $data['items'] = $this->buildObjectsData($objects, $attrs);
 
         foreach ($data['items'] as $i => &$item) {
-            $item['object']['animation'] = 'property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate';
+            // $item['object']['animation'] = 'property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate';
             $item['object']['type'] = 'gltf-model';
             $item['object']['src'] = $item['object']['gltf-model'];
             unset($item['object']['gltf-model']);
