@@ -144,20 +144,17 @@ document.addEventListener('DOMContentLoaded', function () {
             const videoStyle = window.getComputedStyle(video);
             const top = videoStyle.getPropertyValue('top');
 
-            video.addEventListener('play', function () {
-                drawCanvas();
-            });
-
+            video.addEventListener('play', () => drawCanvas());
             video.paused || drawCanvas();
 
             // 绘制canvas内容到视频画面上
             function drawCanvas() {
                 if (video.paused || video.ended) return;
 
-                context.clearRect(0, 0, canvas.width, canvas.height);
-                context.drawImage(video, 0, parseFloat(top), canvas.width, canvas.height);
+                // context.clearRect(0, 0, canvas.width, canvas.height);
+                // context.drawImage(video, 0, parseFloat(top), canvas.width, canvas.height);
                 context.drawImage(
-                    scene.components.screenshot.getCanvas('perspective'),
+                    scene.components.screenshot.canvas,
                     0,
                     0,
                     canvas.width,
