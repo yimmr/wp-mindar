@@ -151,11 +151,9 @@ document.addEventListener('DOMContentLoaded', function () {
             // 绘制canvas内容到视频画面上
             function drawCanvas() {
                 if (video.paused || video.ended) return;
-                console.log(1);
-                // context.clearRect(0, 0, canvas.width, canvas.height);
+                context.clearRect(0, 0, canvas.width, canvas.height);
                 // context.drawImage(video, 0, parseFloat(top), canvas.width, canvas.height);
                 context.drawImage(scene.canvas, 0, 0, canvas.width, canvas.height);
-
                 requestAnimationFrame(drawCanvas);
             }
 
