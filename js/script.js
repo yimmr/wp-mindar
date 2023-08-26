@@ -152,16 +152,13 @@ document.addEventListener('DOMContentLoaded', function () {
             function drawCanvas() {
                 if (video.paused || video.ended) return;
                 context.clearRect(0, 0, canvas.width, canvas.height);
-                // context.drawImage(video, 0, parseFloat(top), canvas.width, canvas.height);
+                context.drawImage(video, 0, parseFloat(top), canvas.width, canvas.height);
                 context.drawImage(scene.canvas, 0, 0, canvas.width, canvas.height);
                 requestAnimationFrame(drawCanvas);
             }
 
-            // const constraints = { audio: true };
-            // const stream = await navigator.mediaDevices.getUserMedia(constraints);
-
             const stream = video.captureStream();
-            const canvasStream = canvas.captureStream();
+            const canvasStream = scene.canvas.captureStream();
 
             recorder = new MediaRecorder(
                 new MediaStream([...stream.getVideoTracks(), ...canvasStream.getVideoTracks()]),
