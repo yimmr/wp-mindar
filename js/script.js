@@ -130,6 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let recorder = null;
         let chunks = [];
+        let ended = true;
 
         function init() {
             if (recorder) return;
@@ -154,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 context.clearRect(0, 0, canvas.width, canvas.height);
                 context.drawImage(video, 0, parseFloat(top), canvas.width, canvas.height);
                 context.drawImage(
-                    scene.components.screenshot.getCanvas('perspective'),
+                    scene.components.screenshot.getCanvas(),
                     0,
                     0,
                     canvas.width,
@@ -194,6 +195,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 chunks = [];
 
                 console.log('recorder stopped');
+                ended = true;
             });
         }
 
@@ -201,6 +203,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         return {
             start() {
+                if (!ended) return;
+                ended = false;
                 chunks = [];
                 recorder.start();
                 console.log(recorder.state);
