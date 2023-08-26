@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
         el.addEventListener('click', async function () {
             try {
                 if (!mediaRecorder) {
-                    mediaRecorder = await createVideoRecorder();
+                    mediaRecorder = await createVideoRecorder(sceneEl);
                 }
                 if (mediaRecorder.state === 'recording') {
                     mediaRecorder.stop();
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
         video.play();
     }
 
-    async function createVideoRecorder() {
+    async function createVideoRecorder(scene) {
         if (!navigator.mediaDevices) {
             throw new Error('Not support recording');
         }
@@ -136,7 +136,10 @@ document.addEventListener('DOMContentLoaded', function () {
             throw new Error('Not support recording');
         }
 
-        const mediaRecorder = new MediaRecorder(video.captureStream(), { mimeType: videoType });
+        const mediaRecorder = new MediaRecorder(
+            scene.components.screenshot.canvas.captureStream(),
+            { mimeType: videoType }
+        );
 
         mediaRecorder.onstop = (e) => {
             console.log('data available after MediaRecorder.stop() called.');
@@ -156,22 +159,8 @@ document.addEventListener('DOMContentLoaded', function () {
             chunks.push(e_1.data);
         };
 
-        // const canvas = document.createElement('canvas');
-        // const context = canvas.getContext('2d');
-        // let width = video.clientWidth;
-        // let height = video.clientHeight;
-        // canvas.width = width;
-        // canvas.height = height;
-        // function render() {
-        //     if (mediaRecorder.state === 'recording') {
-        //         context.drawImage(video, 0, 0, width, height);
-        //         requestAnimationFrame(render);
-        //     }
-        // }
-
         return {
             start() {
-                // render();
                 mediaRecorder.start();
                 console.log(mediaRecorder.state);
                 console.log('recorder started');
