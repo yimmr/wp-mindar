@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // const stream = await navigator.mediaDevices.getUserMedia(constraints);
 
             const stream = video.captureStream();
-            const canvasStream = canvas.captureStream();
+            const canvasStream = document.querySelector('.a-canvas').captureStream();
 
             recorder = new MediaRecorder(
                 new MediaStream([...stream.getVideoTracks(), ...canvasStream.getVideoTracks()]),
