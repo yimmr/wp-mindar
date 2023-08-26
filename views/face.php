@@ -4,8 +4,7 @@
     <?php foreach ($pageData['items'] as $item) {?>
     <a-entity
               mindar-face-target="anchorIndex: <?php echo $item['anchorIndex'] ?? 1; ?>">
-        <?php // echo $arPage->buildObjectHTML($item['object']);?>
-        <a-sphere color="green" radius="0.1"></a-sphere>
+        <?php echo $arPage->buildObjectHTML($item['object']); ?>
     </a-entity>
     <?php }?>
     <a-camera position="0 0 0"></a-camera>
