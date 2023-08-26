@@ -1,9 +1,12 @@
 <a-scene mindar-face color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights"
          vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-    <a-entity mindar-face-target="anchorIndex: 1">
-        <a-sphere color="green" position="0 0 0" radius="0.1"></a-sphere>
+    <?php require_once __DIR__.'/assets.php'; ?>
+    <?php foreach ($pageData['items'] as $item) {?>
+    <a-entity mindar-image-target="targetIndex: 0">
+        <?php echo $arPage->buildObjectHTML($item['object']); ?>
     </a-entity>
-    <a-camera position="0 0 0"></a-camera>
+    <?php }?>
+    <a-camera></a-camera>
 </a-scene>
 <div id="ar-controls-container" class="ar-controls-container">
     <div class="buttons">
