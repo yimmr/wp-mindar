@@ -1,3 +1,5 @@
+<?php
+dd($pageData); ?>
 <a-scene mindar-face color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights"
          vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
     <?php require_once __DIR__.'/assets.php'; ?>

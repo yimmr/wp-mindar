@@ -1,16 +1,15 @@
-<?php
-$target = $pageData['target_src'];
-?>
-<a-scene mindar-image="imageTargetSrc: <?php echo $target; ?>"
-         color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
-         device-orientation-permission-ui="enabled: false">
+<div class="arjs-loader">
+    <div>Loading, please wait...</div>
+</div>
+<a-scene vr-mode-ui='enabled: false;' renderer="logarithmicDepthBuffer: true; precision: medium;" embedded
+         arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
     <?php require_once __DIR__.'/assets.php'; ?>
-    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
     <?php foreach ($pageData['items'] as $item) {?>
-    <a-entity mindar-image-target="targetIndex: 0">
-        <a-plane src="<?php echo $item['marker']['url']; ?>"
-                 position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
+    <a-nft type="nft"
+           url="<?php echo $item['marker']['url']; ?>"
+           smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
         <?php echo $arPage->buildObjectHTML($item['object']); ?>
-    </a-entity>
+    </a-nft>
     <?php }?>
+    <a-entity camera></a-entity>
 </a-scene>

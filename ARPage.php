@@ -4,6 +4,8 @@ namespace MyWPAR;
 
 class ARPage
 {
+    public const AR_TABLE = 'pl_ar_table';
+
     protected $preload = [];
 
     public function buildObjectHTML($data)
@@ -21,24 +23,32 @@ class ARPage
         return "<a-{$type}{$attrStr}></a-{$type}>";
     }
 
-    public function getPageCurrentData()
+    public function shortcodeExists($sortcodeId)
+    {
+        global $wpdb;
+        return $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}".static::AR_TABLE." WHERE shortcode_id={$sortcodeId}") > 0;
+    }
+
+    public function getObjects($sortcodeId)
     {
         global $wpdb;
 
-        $data = ['items' => []];
+        $rawData = $wpdb->get_row("SELECT markers,objects FROM {$wpdb->prefix}".static::AR_TABLE." WHERE shortcode_id={$sortcodeId}");
+        $markers = $this->parseJSONColumn($rawData, 'markers');
+        $objects = $this->parseJSONColumn($rawData, 'objects');
+
+        return array_map(fn ($object) => ['marker' => array_shift($markers), 'object' => $object], $objects);
+    }
+
+    public function getPageCurrentData()
+    {
+        $data = [];
         $sortcodeId = \get_option('pl_ar_current_id');
         $attrs = (array) \get_option('pl_ar_current_options', []);
 
-        $table = $wpdb->prefix.'pl_ar_table';
-        $count = $wpdb->get_var("SELECT COUNT(*) FROM {$table} WHERE shortcode_id={$sortcodeId}");
-
-        if (0 == $count) {
+        if (!$this->shortcodeExists($sortcodeId)) {
             \wp_die('No item with id:'.$sortcodeId.' exists');
         }
-
-        $rawData = $wpdb->get_row("SELECT markers,objects FROM {$table} WHERE shortcode_id={$sortcodeId}");
-        $markers = $this->parseJSONColumn($rawData, 'markers');
-        $objects = $this->parseJSONColumn($rawData, 'objects');
 
         // 提取公共属性
         foreach (['type', 'slatlong'] as $key) {
@@ -48,75 +58,103 @@ class ARPage
             }
         }
 
-        // 构建项目数据
-        foreach ($markers as $key => $value) {
-            if ($value && !empty($objects[$key])) {
-                $data['items'][] = $this->makeItemData($objects[$key], $value, $attrs, $data['type'], $data);
-            }
+        $method = $data['type'];
+
+        if (!method_exists($this, $method)) {
+            \wp_die('Unsupported type:'.$method);
         }
+
+        $this->{$method}($data, $this->getObjects($sortcodeId), $attrs);
 
         $data['preload'] = $this->preload;
 
         return \apply_filters('pl_wpar_page_current_data', $data);
     }
 
-    protected function makeItemData($objectURL, $makerURL, $attrs = [], $type = '', &$data = [])
+    public function face(&$data, $objects, $attrs = [])
     {
-        $ext = pathinfo($objectURL, PATHINFO_EXTENSION);
-        $objectURL = \PL_AR_LINK.$objectURL;
+        $data['items'] = $this->buildObjectsData($objects, $attrs);
 
-        if ('gltf' == $ext) {
-            $srcId = 'animated-asset-'.(count($this->preload) + 1);
-            $this->preload[$srcId] = $objectURL;
-        }
+        $data['target_src'] = [];
+        $data['items'] = array_map(function (&$item) use (&$data) {
+            $item['object']['animation'] = 'property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate';
+            $item['object']['type'] = 'gltf-model';
+            $item['object']['src'] = $item['object']['gltf-model'];
+            unset($item['object']['gltf-model']);
 
-        switch ($ext) {
-            case 'jpg':
-            case 'png':
-                $object = ['type' => 'image', 'src' => $objectURL];
-                // if (isset($attrs['scale'])) {
-                //     $object['autoscale'] = $attrs['scale'];
-                //     unset($attrs['scale']);
-                // }
-                break;
-            case 'gltf':
-                $object = [
-                    'type'            => 'entity',
-                    'animation-mixer' => true,
-                    'gltf-model'      => '#'.$srcId,
-                    'scale'           => '0.007 0.007 0.007',
-                    'rotation'        => '0 0 0 ',
-                    'position'        => '0 0 0.1',
-                ];
-                break;
-            default:break;
-        }
+            if ($item['marker']) {
+                $target = substr($item['marker']['url'], 0, strrpos($item['marker']['url'], '.'));
+                $data['target_src'][] = $target.'.mind';
+            }
+        }, $data['items']);
+    }
 
+    public function image(&$data, $objects, $attrs = [])
+    {
+        $data['items'] = $this->buildObjectsData($objects, $attrs);
+    }
+
+    public function marker(&$data, $objects, $attrs = [])
+    {
+        $data['items'] = $this->buildObjectsData($objects, $attrs);
+    }
+
+    public function location(&$data, $objects, $attrs = [])
+    {
         if (isset($attrs['latlong'])) {
             $latlong = $this->parseLatLong($attrs['latlong']);
             $attrs['gps-entity-place'] = "longitude: {$latlong[1]}; latitude: {$latlong[0]};";
             unset($attrs['latlong']);
         }
 
-        $makerExt = pathinfo($makerURL, PATHINFO_EXTENSION);
+        $data['items'] = $this->buildObjectsData($objects, $attrs);
+    }
 
-        if ('entity' == $object['type'] && ('image' == $type || 'face' == $type)) {
-            $object['type'] = 'gltf-model';
-            // $object['animation'] = 'property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate';
-            $object['src'] = $object['gltf-model'];
-            unset($object['gltf-model']);
+    protected function buildObjectsData(&$objects, $attrs = [])
+    {
+        $items = [];
+        foreach ($objects as $arr) {
+            $object = array_merge($this->parseObject($arr['object']), $attrs);
+            $marker = [];
+
+            if ($arr['marker']) {
+                $makerExt = pathinfo($arr['marker'], PATHINFO_EXTENSION);
+                $marker['url'] = \PL_AR_LINK.$arr['marker'];
+                $marker['type'] = 'patt' == $makerExt ? 'pattern' : '';
+            }
+
+            $items[] = compact('marker', 'object');
         }
+        return $items;
+    }
 
-        if ('image' == $type) {
-            $makerFileName = substr($makerURL, 0, strrpos($makerURL, '.'));
+    public function parseObject($object)
+    {
+        $ext = pathinfo($object, PATHINFO_EXTENSION);
 
-            $data['target_src'] = \PL_AR_LINK.$makerFileName.'.mind';
+        switch ($ext) {
+            case 'jpg':
+            case 'png':
+                $object = ['type' => 'image', 'src' => $this->addPreload(\PL_AR_LINK.$object)];
+                break;
+            case 'gltf':
+                $object = [
+                    'type'       => 'entity',
+                    'gltf-model' => '#'.$this->addPreload(\PL_AR_LINK.$object),
+                ];
+                break;
+            default:
+                $object = ['type' => 'html', 'content' => $object];
+                break;
         }
+        return $object;
+    }
 
-        $object = array_merge($object, $attrs);
-        $marker = ['url' => \PL_AR_LINK.$makerURL, 'type' => 'patt' == $makerExt ? 'pattern' : ''];
-
-        return compact('marker', 'object');
+    public function addPreload($src)
+    {
+        $srcId = 'animated-asset-'.(count($this->preload) + 1);
+        $this->preload[$srcId] = $src;
+        return $srcId;
     }
 
     protected function parseLatLong($string)
