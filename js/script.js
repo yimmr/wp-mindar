@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 context.clearRect(0, 0, canvas.width, canvas.height);
                 context.drawImage(video, 0, parseFloat(top), canvas.width, canvas.height);
                 context.drawImage(
-                    scene.components.screenshot.getCanvas(),
+                    scene.components.screenshot.canvas,
                     0,
                     0,
                     canvas.width,
