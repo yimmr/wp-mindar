@@ -129,14 +129,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         let recorder = null;
+        let chunks = [];
 
         function init() {
-            const chunks = [];
+            if (recorder) return;
+
             const video = document.querySelector('video');
             if (video == null) throw new Error('Media not found.');
 
             const stream = video.captureStream();
-            const canvas = scene.components.screenshot.getCanvas('perspective');
+            const canvas = scene.components.screenshot.canvas;
             const canvasStream = canvas.captureStream();
 
             // const constraints = { audio: true };
@@ -162,14 +164,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 link.download = filename + '.' + videoType.split('/').pop();
                 link.click();
                 window.URL.revokeObjectURL(url);
+                chunks = [];
 
                 console.log('recorder stopped');
             });
         }
 
+        init();
+
         return {
             start() {
-                init();
+                chunks = [];
                 recorder.start();
                 console.log(recorder.state);
                 console.log('recorder started');
