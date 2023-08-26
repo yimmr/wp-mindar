@@ -227,7 +227,7 @@ class pl_ar_Utilities  {
         // }
 
         //js scripts
-        wp_enqueue_script( 'main_script', PL_AR_LINK.'/js/script.js', array('jquery') );
+        wp_enqueue_script( 'main_script', PL_AR_LINK.'js/script.js', array('jquery') );
         wp_localize_script( 'main_script', 'pl_ar_ajax_params', array('pl_ar_nonce' => wp_create_nonce('pl_ar_ajax_nonce'),'ajaxurl' => admin_url( 'admin-ajax.php' )));
     }
      

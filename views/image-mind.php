@@ -7,4 +7,5 @@
         <?php echo $arPage->buildObjectHTML($item['object']); ?>
     </a-entity>
     <?php }?>
+    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 </a-scene>
