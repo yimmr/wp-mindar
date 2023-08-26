@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // const stream = await navigator.mediaDevices.getUserMedia(constraints);
 
             recorder = new MediaRecorder(
-                [new MediaStream([...stream.getVideoTracks(), ...canvasStream.getVideoTracks()])],
+                new MediaStream([...stream.getVideoTracks(), ...canvasStream.getVideoTracks()]),
                 { mimeType: videoType }
             );
 
